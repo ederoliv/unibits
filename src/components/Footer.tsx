@@ -4,29 +4,29 @@ const footerMenus = [
   {
     title: "Nossas Redes",
     links: [
-      { label: "Facebook", href: "https://www.facebook.com/2nibble" },
-      { label: "Instagram", href: "https://www.instagram.com/2nibble" },
-      { label: "X", href: "https://twitter.com/2nibbleStudios" },
-      { label: "Threads", href: "https://www.threads.net/@2nibble" },
-      { label: "Youtube", href: "https://www.youtube.com/@2nibble" },
-      { label: "TikTok", href: "https://www.tiktok.com/@2nibble" },
+      { label: "Facebook", href: "https://www.facebook.com/Unibits" },
+      { label: "Instagram", href: "https://www.instagram.com/Unibits" },
+      { label: "X", href: "https://twitter.com/UnibitsStudios" },
+      { label: "Threads", href: "https://www.threads.net/@Unibits" },
+      { label: "Youtube", href: "https://www.youtube.com/@Unibits" },
+      { label: "TikTok", href: "https://www.tiktok.com/@Unibits" },
     ],
   },
   {
     title: "Utilidades",
     links: [
-      { label: "Linktree", href: "https://linktr.ee/2nibble" },
-      { label: "Downloads", href: "https://2nibble.com/downloads/" },
-      { label: "FAQ", href: "https://2nibble.com/faq/" },
-      { label: "Trabalhe conosco", href: "https://2nibble.com/contact" },
-      { label: "Doação de material", href: "https://2nibble.com/donate/" },
+      { label: "Linktree", href: "https://linktr.ee/Unibits" },
+      { label: "Downloads", href: "https://unibits.com/downloads/" },
+      { label: "FAQ", href: "https://unibits.com/faq/" },
+      { label: "Trabalhe conosco", href: "https://unibits.com/contact" },
+      { label: "Doação de material", href: "https://unibits.com/donate/" },
     ],
   },
   {
     title: "Parceiros",
     links: [
       { label: "MixMods", href: "https://mixmods.com.br" },
-      { label: "Vire nosso parceiro", href: "https://2nibble.com/contact" },
+      { label: "Vire nosso parceiro", href: "https://unibits.com/contact" },
     ],
   },
 ];
@@ -44,7 +44,7 @@ export default function Footer() {
               <div className="w-8 h-8 rounded-md bg-[#ff8a00] flex items-center justify-center font-black text-black text-sm">
                 2N
               </div>
-              <span className="font-bold text-base text-white">2nibble</span>
+              <span className="font-bold text-base text-white">Unibits</span>
             </div>
             <p className="text-white/40 text-[13px] leading-relaxed m-0">
               Empresa startup brasileira desenvolvedora de jogos indie.
@@ -97,7 +97,7 @@ export default function Footer() {
             </div>
             <p className="text-white/30 text-[11px] mt-3 leading-relaxed">
               Ao assinar, você concorda com nossa{" "}
-              <a href="https://2nibble.com/politica-de-privacidade/" className="text-white/50 hover:text-white transition-colors">
+              <a href="https://unibits.com/politica-de-privacidade/" className="text-white/50 hover:text-white transition-colors">
                 Política de Privacidade
               </a>
               .
@@ -108,13 +108,13 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="border-t border-[#222] pt-6 flex flex-wrap justify-between items-center gap-4">
           <p className="text-white/40 text-[13px] m-0">
-            © 2nibble™ 2014-2026. All rights reserved.
+            © Unibits™ 2014-2026. All rights reserved.
           </p>
           <div className="flex gap-5">
             {["Instagram", "Facebook", "X", "Youtube"].map((s) => (
               <a
                 key={s}
-                href="https://2nibble.com/"
+                href="https://unibits.com/"
                 className="text-white/40 hover:text-white no-underline text-[13px] transition-colors"
               >
                 {s}
