@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
@@ -12,14 +12,37 @@ const navLinks = [
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isHidden, setIsHidden] = useState(false);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      setIsScrolled(currentScrollY > 50);
+      
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        setIsHidden(true); // recolhe ao rolar para baixo
+      } else {
+        setIsHidden(false); // mostra ao rolar para cima
+      }
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
 
   return (
-    <header className="sticky top-0 z-50 bg-[#0b0b0b]/95 backdrop-blur-md border-b border-[#222]">
+    <header 
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${isHidden ? '-translate-y-full' : 'translate-y-0'} ${isScrolled ? 'bg-[#0b0b0b]/95 backdrop-blur-md border-b border-[#222]' : 'bg-transparent border-b border-transparent'}`}
+    >
       <div className="max-w-[1440px] mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
         <a href="#" className="flex items-center gap-2.5 no-underline">
           <div className="w-8 h-8 rounded-md bg-[#ff8a00] flex items-center justify-center font-black text-black text-sm">
-            <img src="" alt="" />
+            <img src="/unibits-logo.png" alt="Logo" className="w-full h-full object-contain" onError={(e) => e.currentTarget.style.display = 'none'} />
+            <span className="absolute">2N</span> {/* Fallback se a imagem falhar ou enqnt n carrega */}
           </div>
         </a>
 
@@ -40,7 +63,7 @@ export default function Navbar() {
         <div className="flex items-center gap-4">
           <a
             href="https://unibits.com/contact"
-            className="bg-white text-black px-5 py-2 rounded-md font-bold text-[13px] tracking-wide no-underline hover:bg-white/90 transition-colors"
+            className="bg-white text-black px-5 py-2 rounded-md font-bold text-[13px] tracking-wide no-underline hover:bg-white/90 transition-colors shadow-sm"
           >
             CONTATE-NOS
           </a>

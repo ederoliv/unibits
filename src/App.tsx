@@ -26,15 +26,23 @@ export default function App() {
       <Navbar />
 
       {/* ── HERO ────────────────────────────────────────────────────────────── */}
-      <section className="min-h-[90vh] flex flex-col items-center justify-center text-center py-20 px-6 relative overflow-hidden w-full">
-        {/* Background gradient decoration */}
-        <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_80%_60%_at_50%_0%,rgba(255,138,0,0.13)_0%,transparent_70%)]" />
-
-        <div className="w-full max-w-[1440px] px-0 lg:px-8 xl:px-16 2xl:px-24">
-           <ImgPlaceholder label="Banner principal — IMPUNES" />
+      <section className="min-h-[90vh] flex flex-col items-center justify-center text-center px-6 relative overflow-hidden w-full pt-32 pb-20">
+        
+        {/* Background Image Full Bleed */}
+        <div className="absolute inset-0 w-full h-full z-0">
+          <img 
+            src="/pocket_grau-banner.png" 
+            alt="Banner principal" 
+            className="w-full h-full object-cover" 
+          />
+          {/* Overlay escuro para garantir a leitura do texto */}
+          <div className="absolute inset-0 bg-[#0b0b0b]/80" />
         </div>
 
-        <div className="relative z-10 mt-16 max-w-[1440px]">
+        {/* Background gradient decoration */}
+        <div className="absolute inset-0 z-0 pointer-events-none bg-[radial-gradient(ellipse_80%_60%_at_50%_0%,rgba(255,138,0,0.15)_0%,transparent_70%)]" />
+
+        <div className="relative z-10 max-w-[1440px]">
           <span className="text-[12px] font-bold tracking-[3px] text-[#ff8a00] uppercase">
             Unibits Studios
           </span>
