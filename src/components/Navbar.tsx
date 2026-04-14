@@ -5,7 +5,7 @@ import { games } from "../data/games";
 
 const navLinks = [
   { label: "Início", path: "/" },
-  { label: "Sobre", href: "https://unibits.com/about/" },
+  { label: "Sobre", href: "/#sobre" },
   { label: "Nossos jogos", isDropdown: true },
 ];
 

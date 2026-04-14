@@ -28,7 +28,7 @@ export default function GamePage() {
                  e.currentTarget.src = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" rx="32" fill="%23222"/><text x="50" y="50" fill="%23ff8a00" font-family="sans-serif" font-weight="bold" font-size="20" text-anchor="middle" alignment-baseline="middle">APP</text></svg>';
               }}
             />
-            <h1 className="text-[clamp(2.2rem,5vw,4rem)] font-black leading-tight text-white mb-2 tracking-[-1px] text-center drop-shadow-md">
+            <h1 className="text-[clamp(2.2rem,5vw,4rem)] font-black leading-tight text-white mb-2 tracking-[-1px] text-center drop-shadow-[0_4px_10px_rgba(0,0,0,0.8)]">
               {game.title}
             </h1>
           </div>
@@ -46,15 +46,15 @@ export default function GamePage() {
           </p>
         </div>
 
-        <div className="mt-16">
-          <h3 className="text-2xl font-bold mb-8 border-b border-[#222] pb-4">
+        <div className="mt-16 text-center">
+          <h3 className="text-2xl font-bold mb-8 border-b border-[#222] pb-4 inline-block px-8">
             {game.featuresTitle}
           </h3>
-          <div className="flex flex-col gap-8">
+          <div className="flex flex-col gap-8 items-center">
             {game.features.map((feature, idx) => (
-              <div key={idx}>
+              <div key={idx} className="max-w-[700px]">
                 <h4 className="text-[18px] font-bold text-white mb-2">{feature.title}</h4>
-                <p className="text-white/70 leading-[1.8] text-[15px]">{feature.description}</p>
+                <p className="text-white/70 leading-[1.8] text-[15px] mx-auto">{feature.description}</p>
               </div>
             ))}
           </div>
