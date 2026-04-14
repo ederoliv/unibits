@@ -77,8 +77,8 @@ export const games: GameInfo[] = [
       }
     ],
     conclusion: "Trabalhe, conquiste e empine com estilo.",
-    playStoreUrl: "https://play.google.com/store/apps/details?id=com.Unibits.MotoGrau", // replace with correct store link later if needed
-    iconSrc: "https://play-lh.googleusercontent.com/Eti6zDxukrYbompKRg_rCJyItB-T4jQIzg8EbRMC5yKBPnvxz3hkvBkeT18m7jh0UQ=w240-h480-rw", // Placeholder
+    playStoreUrl: "https://play.google.com/store/apps/details?id=com.Unibits.MotoGrauBrasil", 
+    iconSrc: "https://play-lh.googleusercontent.com/Eti6zDxukrYbompKRg_rCJyItB-T4jQIzg8EbRMC5yKBPnvxz3hkvBkeT18m7jh0UQ=w240-h480-rw",
     banners: [
       "https://play-lh.googleusercontent.com/MxjHBH1m-I603Nug9btVSB3f8W9-71yFCThOcdFIkXhMUAaIu0JTByrEQqIQv3nvtfUX=w2560-h1440-rw",
       "https://play-lh.googleusercontent.com/_gUw08FzAjSoBVfEA91RLx_BMJ4zbsZZBM7bXnCCxtakmuL1YZNa9uw9Z2AbPZcwQws=w2560-h1440-rw",
@@ -113,7 +113,7 @@ export const games: GameInfo[] = [
       }
     ],
     conclusion: "Sua vida, suas regras, seu grau.",
-    playStoreUrl: "https://play.google.com/store/apps/details?id=com.Unibits.GrauEChapa", // replace with correct store link later if needed
+    playStoreUrl: "https://play.google.com/store/apps/details?id=com.Unibits.GrauChapaBR",
     iconSrc: "https://play-lh.googleusercontent.com/m4gdmQtwz1CYUYjB984FFS7ckaYEkxWLlVPdFfQAevfMm2IWNCjlNoME4tmgnXouHf5QtiaDfx3R1ZPlzyLYJXs=w240-h480-rw", // Placeholder
     banners: [
       "https://play-lh.googleusercontent.com/Vq0gaoGEG8XqwPuaoXzGCnCp67UkOcwo0moNnIN5OpKnPpkVUVyCHB-FDpx6zH5DgVLsLkY-pUjYKCGRT_31nQ=w2560-h1440-rw",

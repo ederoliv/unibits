@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { games } from "../data/games";
 
@@ -10,8 +10,8 @@ const navLinks = [
 ];
 
 export default function Navbar() {
+  const location = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isHidden, setIsHidden] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
   
@@ -22,7 +22,6 @@ export default function Navbar() {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      setIsScrolled(currentScrollY > 50);
       
       if (currentScrollY > lastScrollY && currentScrollY > 100) {
         setIsHidden(true); // recolhe ao rolar para baixo
