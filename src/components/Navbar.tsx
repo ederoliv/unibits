@@ -6,7 +6,7 @@ import { games } from "../data/games";
 const navLinks = [
   { label: "Início", path: "/" },
   { label: "Sobre", href: "/#sobre" },
-  { label: "Nossos jogos", isDropdown: true },
+  { label: "Nossos jogos", isDropdown: true, href: "/#nossos-jogos" },
 ];
 
 export default function Navbar() {
@@ -43,7 +43,7 @@ export default function Navbar() {
 
   return (
     <header 
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${isHidden ? '-translate-y-full' : 'translate-y-0'} bg-[#0b0b0b]/70 border-b-[0.5px] border-[#666]`}
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${isHidden ? '-translate-y-full' : 'translate-y-0'} bg-[#0b0b0b]/50 border-b-[0.5px] border-[#666]`}
     >
       <div className="max-w-[1440px] mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
@@ -62,10 +62,10 @@ export default function Navbar() {
                   onMouseEnter={() => setDesktopDropdownOpen(true)}
                   onMouseLeave={() => setDesktopDropdownOpen(false)}
                 >
-                  <button className="text-white hover:text-white transition-colors text-sm font-medium flex items-center gap-1 cursor-pointer bg-transparent border-none">
+                  <a href={l.href} className="text-white hover:text-white transition-colors text-sm font-medium flex items-center gap-1 cursor-pointer bg-transparent border-none no-underline">
                     {l.label}
                     <ChevronDown size={14} className={`transition-transform duration-200 ${desktopDropdownOpen ? 'rotate-180' : ''}`} />
-                  </button>
+                  </a>
                   
                   {desktopDropdownOpen && (
                     <div className="absolute top-full left-0 pt-2 w-[220px] z-50">
@@ -112,7 +112,7 @@ export default function Navbar() {
         {/* CTA + Toggle */}
         <div className="flex items-center gap-4">
           <a
-            href="https://unibits.com/contact"
+            href="#contatos"
             className="bg-white text-black px-5 py-2 rounded-full font-bold text-[13px] tracking-wide no-underline hover:bg-white/90 transition-colors shadow-sm"
           >
             CONTATE-NOS
@@ -134,13 +134,14 @@ export default function Navbar() {
             if (l.isDropdown) {
               return (
                 <div key={l.label} className="border-b border-[#222]">
-                  <button 
-                    onClick={() => setMobileDropdownOpen(!mobileDropdownOpen)}
-                    className="w-full text-white/80 py-3 text-[15px] flex justify-between items-center bg-transparent border-none cursor-pointer"
-                  >
-                    {l.label}
-                    <ChevronDown size={18} className={`transition-transform duration-200 ${mobileDropdownOpen ? 'rotate-180' : ''}`} />
-                  </button>
+                  <div className="w-full text-white/80 py-3 text-[15px] flex justify-between items-center bg-transparent border-none">
+                    <a href={l.href} onClick={() => setMenuOpen(false)} className="text-white/80 hover:text-white no-underline text-left flex-1 font-medium">
+                      {l.label}
+                    </a>
+                    <button onClick={() => setMobileDropdownOpen(!mobileDropdownOpen)} className="bg-[#222] hover:bg-[#333] transition-colors rounded-md p-1.5 cursor-pointer text-white flex-shrink-0 border-none">
+                      <ChevronDown size={18} className={`transition-transform duration-200 ${mobileDropdownOpen ? 'rotate-180' : ''}`} />
+                    </button>
+                  </div>
                   {mobileDropdownOpen && (
                     <div className="flex flex-col ml-4 pb-2">
                       {games.map(game => (
