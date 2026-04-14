@@ -85,7 +85,7 @@ export default function Home() {
           
           <div className="flex justify-center gap-6 flex-wrap">
             <a 
-              href="https://youtube.com/" 
+              href="https://www.youtube.com/@Unibits" 
               target="_blank" 
               rel="noopener noreferrer"
               className="flex items-center gap-3 bg-[#111] hover:bg-[#ff0000] border border-[#333] hover:border-[#ff0000] transition-colors rounded-full px-6 py-3 text-white no-underline font-bold text-sm"
@@ -94,7 +94,7 @@ export default function Home() {
               YouTube
             </a>
             <a 
-              href="https://instagram.com/" 
+              href="https://www.instagram.com/unibitsstudios" 
               target="_blank" 
               rel="noopener noreferrer"
               className="flex items-center gap-3 bg-[#111] hover:bg-[#e1306c] border border-[#333] hover:border-[#e1306c] transition-colors rounded-full px-6 py-3 text-white no-underline font-bold text-sm"
@@ -103,7 +103,7 @@ export default function Home() {
               Instagram
             </a>
             <a 
-              href="https://discord.com/" 
+              href="https://discord.com/invite/agyd4n5PUE" 
               target="_blank" 
               rel="noopener noreferrer"
               className="flex items-center gap-3 bg-[#111] hover:bg-[#5865F2] border border-[#333] hover:border-[#5865F2] transition-colors rounded-full px-6 py-3 text-white no-underline font-bold text-sm"
