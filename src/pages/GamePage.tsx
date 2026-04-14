@@ -13,8 +13,8 @@ export default function GamePage() {
   return (
     <div className="w-full flex flex-col">
       {/* Hero section with carousel and logo/title overlay */}
-      <section className="relative w-full pt-28 pb-10 flex justify-center px-4">
-        <div className="w-[95%] md:w-[70%] max-w-[1440px] relative rounded-[2.5rem] overflow-hidden border border-[#333] shadow-2xl">
+      <section className="relative w-full pt-28 pb-10 flex justify-center px-0 md:px-4">
+        <div className="w-full md:w-[70%] max-w-[1440px] relative rounded-none md:rounded-[2.5rem] overflow-hidden border border-x-0 md:border-x border-[#333] shadow-2xl">
           <Carousel images={game.banners} />
           
           {/* Overlay Content */}
