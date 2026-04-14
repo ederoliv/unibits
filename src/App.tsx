@@ -52,13 +52,13 @@ export default function App() {
           <div className="flex gap-4 justify-center flex-wrap">
             <a
               href="https://unibits.com/impunes/"
-              className="bg-white text-black px-9 py-3.5 rounded-md font-bold no-underline text-sm tracking-[0.5px] hover:bg-neutral-200 transition-colors"
+              className="bg-white text-black px-9 py-3.5 rounded-full font-bold no-underline text-sm tracking-[0.5px] hover:bg-neutral-200 transition-colors"
             >
               CONHEÇA
             </a>
             <a
               href="https://play.google.com/store/apps/details?id=com.Unibits.PocketGrau"
-              className="bg-white text-black px-9 py-3.5 rounded-md font-bold no-underline text-sm tracking-[0.5px] hover:bg-neutral-200 transition-colors"
+              className="bg-white text-black px-9 py-3.5 rounded-full font-bold no-underline text-sm tracking-[0.5px] hover:bg-neutral-200 transition-colors"
               target="_blank"
             >
               Ver na Play Store
@@ -80,10 +80,11 @@ export default function App() {
           </div>
           <div className="flex flex-col gap-6">
             <p className="text-white/70 leading-[1.8] m-0 text-[15px]">
-              Nós somos uma pequena empresa startup de amantes de jogos e modding, com uma paixão pela produção de trabalhos ambiciosos, de alta qualidade, que fiquem marcados na cultura dos jogos eletrônicos brasileiros.
+              Somos uma equipe brasileira de desenvolvimento de jogos, focada em trazer o Brasil para o cenário mundial de games. Atualmente, utilizamos Unity® como motor gráfico, escolhida após uma criteriosa seleção para determinar a melhor opção para jogos mobile.
             </p>
             <p className="text-white/70 leading-[1.8] m-0 text-[15px]">
-              Somos gamers como você, com desejos, buscando algo diferente, novo, criativo, que gostaríamos de ver na área de games. Ainda trabalhando com baixo orçamento, mas já demonstrando potencial.
+              Estamos comprometidos com o entretenimento e a otimização, sem comprometer a qualidade de nossos projetos. Nossa equipe é atualmente composta por um programador/modelador/game designer e um mapper.
+
             </p>
           </div>
         </div>
@@ -124,7 +125,7 @@ export default function App() {
                   {f.hasButton && (
                     <a
                       href={f.hasButton.href}
-                      className="bg-white text-black px-7 py-3 rounded-md font-bold no-underline text-[13px] tracking-[0.3px] inline-block hover:bg-neutral-200 transition-colors"
+                      className="bg-white text-black px-7 py-3 rounded-full font-bold no-underline text-[13px] tracking-[0.3px] inline-block hover:bg-neutral-200 transition-colors"
                     >
                       {f.hasButton.label}
                     </a>
@@ -153,7 +154,7 @@ export default function App() {
               </p>
               <a
                 href="https://unibits.com/donate/"
-                className="bg-[#ff8a00] text-black px-10 py-3.5 rounded-md font-bold no-underline text-[15px] hover:bg-[#e07900] transition-colors inline-block"
+                className="bg-[#ff8a00] text-black px-10 py-3.5 rounded-full font-bold no-underline text-[15px] hover:bg-[#e07900] transition-colors inline-block"
               >
                 Apoie ❤️
               </a>
@@ -173,7 +174,7 @@ export default function App() {
           </p>
           <a
             href="https://unibits.com/impunes/"
-            className="bg-white text-black px-9 py-3.5 rounded-md font-bold no-underline text-[14px] hover:bg-neutral-200 transition-colors inline-block"
+            className="bg-white text-black px-9 py-3.5 rounded-full font-bold no-underline text-[14px] hover:bg-neutral-200 transition-colors inline-block"
           >
             Progresso do IMPUNES
           </a>

@@ -32,7 +32,7 @@ export default function Navbar() {
 
   return (
     <header 
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${isHidden ? '-translate-y-full' : 'translate-y-0'} bg-[#0b0b0b]/70 backdrop-blur-md border-b border-[#666]`}
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${isHidden ? '-translate-y-full' : 'translate-y-0'} bg-[#0b0b0b]/30 border-b-[0.5px] border-[#666]`}
     >
       <div className="max-w-[1440px] mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
@@ -46,7 +46,7 @@ export default function Navbar() {
             <a
               key={l.label}
               href={l.href}
-              className="text-white/70 hover:text-white transition-colors no-underline text-sm font-medium"
+              className="text-white hover:text-white transition-colors no-underline text-sm font-medium"
             >
               {l.label}
             </a>
@@ -57,7 +57,7 @@ export default function Navbar() {
         <div className="flex items-center gap-4">
           <a
             href="https://unibits.com/contact"
-            className="bg-white text-black px-5 py-2 rounded-md font-bold text-[13px] tracking-wide no-underline hover:bg-white/90 transition-colors shadow-sm"
+            className="bg-white text-black px-5 py-2 rounded-full font-bold text-[13px] tracking-wide no-underline hover:bg-white/90 transition-colors shadow-sm"
           >
             CONTATE-NOS
           </a>

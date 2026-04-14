@@ -85,10 +85,10 @@ export default function Footer() {
                 placeholder="Seu e-mail"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="bg-[#111] border border-[#222] rounded-md px-3.5 py-2.5 text-white text-sm outline-none focus:border-[#ff8a00] transition-colors"
+                className="bg-[#111] border border-[#222] rounded-full px-4 py-2.5 text-white text-sm outline-none focus:border-[#ff8a00] transition-colors"
               />
               <button
-                className="bg-white text-black border-none rounded-md px-3.5 py-2.5 font-bold cursor-pointer text-[13px] hover:bg-white/90 transition-colors"
+                className="bg-white text-black border-none rounded-full px-4 py-2.5 font-bold cursor-pointer text-[13px] hover:bg-white/90 transition-colors"
                 type="button"
               >
                 Inscrever
