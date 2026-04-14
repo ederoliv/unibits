@@ -3,11 +3,8 @@ import { Menu, X } from "lucide-react";
 
 const navLinks = [
   { label: "Início", href: "https://unibits.com/" },
-  { label: "Notícias", href: "https://unibits.com/news/" },
-  { label: "Trabalhos", href: "https://unibits.com/works" },
   { label: "Sobre", href: "https://unibits.com/about/" },
   { label: "Downloads", href: "https://unibits.com/downloads/" },
-  { label: "FAQ", href: "https://unibits.com/faq/" },
 ];
 
 export default function Navbar() {
@@ -35,15 +32,12 @@ export default function Navbar() {
 
   return (
     <header 
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${isHidden ? '-translate-y-full' : 'translate-y-0'} ${isScrolled ? 'bg-[#0b0b0b]/95 backdrop-blur-md border-b border-[#222]' : 'bg-transparent border-b border-transparent'}`}
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${isHidden ? '-translate-y-full' : 'translate-y-0'} bg-[#0b0b0b]/70 backdrop-blur-md border-b border-[#666]`}
     >
       <div className="max-w-[1440px] mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
         <a href="#" className="flex items-center gap-2.5 no-underline">
-          <div className="w-8 h-8 rounded-md bg-[#ff8a00] flex items-center justify-center font-black text-black text-sm">
-            <img src="/unibits-logo.png" alt="Logo" className="w-full h-full object-contain" onError={(e) => e.currentTarget.style.display = 'none'} />
-            <span className="absolute">2N</span> {/* Fallback se a imagem falhar ou enqnt n carrega */}
-          </div>
+          <img src="/unibits-logo.png" alt="Logo" className="h-12 w-auto object-contain" onError={(e) => e.currentTarget.style.display = 'none'} />
         </a>
 
         {/* Desktop Nav */}

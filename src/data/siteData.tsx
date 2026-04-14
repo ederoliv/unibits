@@ -1,11 +1,4 @@
-import type { ReactNode } from "react";
-
 // ─── Types ───────────────────────────────────────────────────────────────────
-export interface FaqItem {
-  question: string;
-  answer: ReactNode;
-}
-
 export interface Feature {
   title: string;
   description: string;
@@ -14,19 +7,6 @@ export interface Feature {
 }
 
 // ─── Data ────────────────────────────────────────────────────────────────────
-export const devlogs = [
-  { title: "IMPUNES agora na Steam!", href: "https://unibits.com/impunes-agora-na-steam/" },
-  { title: "IMPUNES Devlog: Objetos e vegetação", href: "https://unibits.com/impunes-devlog-objetos-e-vegetacao/" },
-  { title: "IMPUNES Devlog: Resumo 2022 até 2024", href: "https://unibits.com/impunes-devlog-resumo-2022-ate-2024/" },
-];
-
-export const projects = [
-  { title: "IMPUNES", href: "https://unibits.com/impunes/" },
-  { title: "BUG", href: "https://unibits.com/bug/" },
-  { title: "WARPUNK", href: "https://unibits.com/warpunk/" },
-  { title: "NPD", href: "https://unibits.com/npd/" },
-];
-
 export const mediaLinks = [
   { label: "G1 Globo", href: "https://g1.globo.com/sc/santa-catarina/noticia/2024/02/17/gta-brasileiro-balneario-camboriu.ghtml" },
   { label: "Tecmundo", href: "https://www.tecmundo.com.br/voxel/502070-impunes-jogo-ao-estilo-gta-brasileiro-ganha-trailer-e-pagina-oficial-na-steam.htm" },
@@ -97,43 +77,5 @@ export const features: Feature[] = [
     description: "Equipe conhecida pela alta qualidade técnica, buscando otimização e funcionalidades modernas, como 4K60, ultra widescreen, raytracing de áudio, GPU-driven, muitas opções gráficas para diferentes hardwares, etc.",
     hasButton: { label: "Confira mais detalhes específicos", href: "https://unibits.com/impunes/details/" },
     reverse: true,
-  },
-];
-
-export const faqItems: FaqItem[] = [
-  {
-    question: "Como apoiar vocês?",
-    answer: (
-      <>
-        Você pode doar por Pix ou outros métodos. Mais informações na{" "}
-        <a href="https://unibits.com/donate/" className="text-[#ff8a00] hover:underline">
-          página de doação
-        </a>
-        , você inclusive recebe recompensas ao apoiar o projeto IMPUNES!
-      </>
-    ),
-  },
-  {
-    question: "Quais são os membros da equipe?",
-    answer: (
-      <>
-        Os desenvolvedores da Unibits são muito cíclicos, portanto até o momento (2025) não estamos listando eles. Eles são listados em{" "}
-        <a href="https://unibits.com/news/" className="text-[#ff8a00] hover:underline">postagens de devlog</a> e créditos dos jogos que lançamos, e lançaremos.
-        <br /><br />
-        Em jogos já lançados por nós, até o momento, temos Valdir Júnior (Junior_Djjr, criador do site MixMods e co-fundador da Unibits), Chrystian Farias (programador sênior de uma subsidiária e MVP da Microsoft), Lameque (Meck) e Vitor Kuhn.
-        <br /><br />
-        No momento, a quantidade de desenvolvedores do IMPUNES ativos constantes normalmente é de 2 ou 3, e no total são 5 ou 6. A equipe trabalha remotamente de diferentes partes do Brasil, tudo isso no tempo livre, sem salários, acreditando no potencial futuro.
-      </>
-    ),
-  },
-  {
-    question: "Quando o IMPUNES lança?",
-    answer: (
-      <>
-        Ainda sem data, e devido ao financiamento coletivo ser abaixo do esperado, a data prevista para um lançamento para PC na Steam ficou para 2027, mas a partir de 2025 pretendemos começar a lançar versões "demo" aos apoiadores, e você pode{" "}
-        <a href="https://unibits.com/donate/" className="text-[#ff8a00] hover:underline">apoiar aqui</a>{" "}
-        para testar o jogo antes de todo mundo, além de acompanhar o projeto em contato exclusivo com os desenvolvedores!
-      </>
-    ),
   },
 ];

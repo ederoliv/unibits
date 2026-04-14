@@ -17,7 +17,6 @@ const footerMenus = [
     links: [
       { label: "Linktree", href: "https://linktr.ee/Unibits" },
       { label: "Downloads", href: "https://unibits.com/downloads/" },
-      { label: "FAQ", href: "https://unibits.com/faq/" },
       { label: "Trabalhe conosco", href: "https://unibits.com/contact" },
       { label: "Doação de material", href: "https://unibits.com/donate/" },
     ],
