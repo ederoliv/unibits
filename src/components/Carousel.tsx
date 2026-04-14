@@ -19,18 +19,18 @@ export default function Carousel({ images }: CarouselProps) {
   if (!images || images.length === 0) return null;
 
   return (
-    <div className="relative w-full h-[60vh] min-h-[400px] overflow-hidden">
+    <div className="relative w-full bg-black overflow-hidden">
       {/* Images container */}
       <div 
-        className="flex transition-transform duration-500 ease-out h-full"
+        className="flex transition-transform duration-500 ease-out"
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
       >
         {images.map((img, i) => (
-          <div key={i} className="min-w-full h-full relative">
+          <div key={i} className="min-w-full relative flex">
             <img 
               src={img} 
               alt={`Banner ${i + 1}`} 
-              className="w-full h-full object-cover"
+              className="w-full h-auto object-contain"
               onError={(e) => {
                 // Placeholder fallback for missing images
                 e.currentTarget.src = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 800 400" preserveAspectRatio="none"><rect width="800" height="400" fill="%231a1a1a"/><text x="400" y="200" fill="%23444" font-family="sans-serif" font-size="24" text-anchor="middle" alignment-baseline="middle">Banner do Jogo</text></svg>';

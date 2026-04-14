@@ -13,23 +13,25 @@ export default function GamePage() {
   return (
     <div className="w-full flex flex-col">
       {/* Hero section with carousel and logo/title overlay */}
-      <section className="relative w-full">
-        <Carousel images={game.banners} />
-        
-        {/* Overlay Content */}
-        <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none z-10 px-6 pt-16">
-          <img 
-            src={game.iconSrc} 
-            alt={`Ícone ${game.title}`} 
-            className="w-24 h-24 md:w-32 md:h-32 rounded-[32px] shadow-2xl mb-4 md:mb-6 object-cover border border-[#222]" 
-            onError={(e) => {
-               // Fallback icon placeholder if not provided
-               e.currentTarget.src = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" rx="32" fill="%23222"/><text x="50" y="50" fill="%23ff8a00" font-family="sans-serif" font-weight="bold" font-size="20" text-anchor="middle" alignment-baseline="middle">APP</text></svg>';
-            }}
-          />
-          <h1 className="text-[clamp(2.5rem,6vw,4.5rem)] font-black leading-tight text-white mb-2 tracking-[-1px] text-center drop-shadow-md">
-            {game.title}
-          </h1>
+      <section className="relative w-full pt-28 pb-10 flex justify-center px-4">
+        <div className="w-[95%] md:w-[70%] max-w-[1440px] relative rounded-[2.5rem] overflow-hidden border border-[#333] shadow-2xl">
+          <Carousel images={game.banners} />
+          
+          {/* Overlay Content */}
+          <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none z-10 px-6">
+            <img 
+              src={game.iconSrc} 
+              alt={`Ícone ${game.title}`} 
+              className="w-20 h-20 md:w-28 md:h-28 rounded-3xl shadow-2xl mb-4 md:mb-6 object-cover border border-[#222]" 
+              onError={(e) => {
+                 // Fallback icon placeholder if not provided
+                 e.currentTarget.src = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" rx="32" fill="%23222"/><text x="50" y="50" fill="%23ff8a00" font-family="sans-serif" font-weight="bold" font-size="20" text-anchor="middle" alignment-baseline="middle">APP</text></svg>';
+              }}
+            />
+            <h1 className="text-[clamp(2.2rem,5vw,4rem)] font-black leading-tight text-white mb-2 tracking-[-1px] text-center drop-shadow-md">
+              {game.title}
+            </h1>
+          </div>
         </div>
       </section>
 
