@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import GamePage from "./pages/GamePage";
+import PrivacyPolicyPage from "./pages/PrivacyPolicyPage";
 import ScrollToTop from "./components/ScrollToTop";
 
 export default function App() {
@@ -17,6 +18,7 @@ export default function App() {
            <Routes>
              <Route path="/" element={<Home />} />
              <Route path="/jogo/:id" element={<GamePage />} />
+             <Route path="/privacidade" element={<PrivacyPolicyPage />} />
            </Routes>
         </main>
         

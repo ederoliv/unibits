@@ -21,6 +21,11 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="w-full border-t border-[#222] pt-6 flex flex-col justify-center items-center gap-4 text-center">
+          <div className="flex gap-4">
+             <Link to="/privacidade" className="text-white/60 hover:text-white transition-colors text-[14px] no-underline">
+               Política de Privacidade
+             </Link>
+          </div>
           <p className="text-white/40 text-[13px] m-0 w-full">
             © Unibits™ 2026. All rights reserved. 
             <span className="block md:inline mt-2 md:mt-0 md:ml-2">

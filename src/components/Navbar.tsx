@@ -7,6 +7,7 @@ const navLinks = [
   { label: "Início", path: "/" },
   { label: "Sobre", href: "/#sobre" },
   { label: "Nossos jogos", isDropdown: true, href: "/#nossos-jogos" },
+  { label: "Privacidade", path: "/privacidade" },
 ];
 
 export default function Navbar() {
