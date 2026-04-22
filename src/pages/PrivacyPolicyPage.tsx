@@ -21,6 +21,8 @@ export default function PrivacyPolicyPage() {
             <li><strong className="text-white">Pocket Grau</strong></li>
             <li><strong className="text-white">Moto Grau Brasil</strong></li>
             <li><strong className="text-white">Grau e Chapa</strong></li>
+            <li><strong className="text-white">Patrulha 244</strong></li>
+            <li><strong className="text-white">Elite Carros BR 2</strong></li>
             <li><strong className="text-white">Skins Pocket Grau</strong> (aplicativo complementar que oferece skins para o jogo Pocket Grau)</li>
           </ul>
           <p className="text-white/60 text-sm">
