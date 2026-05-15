@@ -64,14 +64,26 @@ export default function GamePage() {
           <p className="text-[18px] text-white/90 font-medium mb-8 leading-relaxed">
             {game.conclusion}
           </p>
-          <a
-            href={game.playStoreUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-[#ff8a00] text-black px-10 py-4 rounded-full font-bold no-underline text-[16px] hover:bg-[#e07900] transition-transform hover:-translate-y-1 inline-block shadow-lg"
-          >
-            BAIXAR NA PLAY STORE
-          </a>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <a
+              href={game.playStoreUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#ff8a00] text-black px-10 py-4 rounded-full font-bold no-underline text-[16px] hover:bg-[#e07900] transition-transform hover:-translate-y-1 inline-block shadow-lg"
+            >
+              BAIXAR NA PLAY STORE
+            </a>
+            {game.id === "pocket-grau" && (
+              <a
+                href="https://drive.google.com/drive/folders/1MjsuOIgr2kf-JulKPqkdqXBnaId7MjGO?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-transparent border-2 border-[#ff8a00] text-[#ff8a00] px-10 py-4 rounded-full font-bold no-underline text-[16px] hover:bg-[#ff8a00]/10 transition-transform hover:-translate-y-1 inline-block shadow-lg"
+              >
+                Skins padrão do Pocket Grau
+              </a>
+            )}
+          </div>
         </div>
       </section>
     </div>
