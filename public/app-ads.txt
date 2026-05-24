@@ -1,4 +1,5 @@
 google.com, pub-6270441175948867, DIRECT, f08c47fec0942fa0
+google.com, pub-6594437869958901, DIRECT, f08c47fec0942fa0
 algorix.co, 54616, RESELLER, 5b394c12fea27a1d
 pubmatic.com, 164119, RESELLER, 5d62403b186f2ace
 onetag.com, 8668c16092f01e8, RESELLER
