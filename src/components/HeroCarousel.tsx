@@ -16,7 +16,7 @@ export default function HeroCarousel() {
   const game = games[currentIndex];
 
   return (
-    <section className="min-h-[90vh] flex flex-col items-center justify-center text-center px-6 relative overflow-hidden w-full pt-32 pb-20">
+    <section className="min-h-[70vh] flex flex-col items-center justify-center text-center px-6 relative overflow-hidden w-full pt-24 pb-32">
       {/* Animated Background with current game banner */}
       <div className="absolute inset-0 w-full h-full z-0 transition-opacity duration-1000">
         <img 
@@ -34,20 +34,20 @@ export default function HeroCarousel() {
       {/* Background gradient decoration */}
       <div className="absolute inset-0 z-0 pointer-events-none bg-[radial-gradient(ellipse_80%_60%_at_50%_0%,rgba(255,138,0,0.15)_0%,transparent_70%)]" />
 
-      <div className="relative z-10 max-w-[1440px] w-full flex flex-col items-center">
+      <div className="relative z-10 max-w-[1440px] w-full flex flex-col items-center justify-center h-full">
         <span className="text-[12px] font-bold tracking-[3px] text-[#ff8a00] uppercase drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
           Unibits Studios
         </span>
         
-        <h1 className="text-[clamp(2.2rem,6vw,4.5rem)] font-black leading-[1.05] my-4 md:my-6 tracking-[-2px] drop-shadow-[0_4px_10px_rgba(0,0,0,0.7)] animate-fade-in">
+        <h1 className="text-[clamp(2.2rem,6vw,4.5rem)] font-black leading-[1.05] my-3 md:my-4 tracking-[-2px] drop-shadow-[0_4px_10px_rgba(0,0,0,0.7)] animate-fade-in">
           {game.title}
         </h1>
         
-        <p className="text-[clamp(0.9rem,2vw,1.2rem)] text-[#ff8a00] font-bold max-w-[600px] mx-auto mb-4 leading-[1.4] drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+        <p className="text-[clamp(0.9rem,2vw,1.2rem)] text-[#ff8a00] font-bold max-w-[600px] mx-auto mb-3 leading-[1.4] drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
           {game.subtitle}
         </p>
         
-        <p className="text-[clamp(0.85rem,1.8vw,1rem)] text-white/90 max-w-[680px] mx-auto mb-10 leading-[1.6] drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]">
+        <p className="text-[clamp(0.85rem,1.8vw,1rem)] text-white/90 max-w-[680px] mx-auto mb-8 leading-[1.6] drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]">
           {game.description}
         </p>
         
@@ -67,22 +67,22 @@ export default function HeroCarousel() {
             Play Store
           </a>
         </div>
+      </div>
 
-        {/* Carousel indicators */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-2 z-20">
-          {games.map((_, idx) => (
-            <button
-              key={idx}
-              onClick={() => setCurrentIndex(idx)}
-              className={`w-3 h-3 rounded-full transition-all ${
-                idx === currentIndex 
-                  ? "bg-[#ff8a00] w-8" 
-                  : "bg-white/40 hover:bg-white/60"
-              }`}
-              aria-label={`Go to game ${idx + 1}`}
-            />
-          ))}
-        </div>
+      {/* Carousel indicators - positioned at the very bottom */}
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-20 pointer-events-auto">
+        {games.map((_, idx) => (
+          <button
+            key={idx}
+            onClick={() => setCurrentIndex(idx)}
+            className={`w-3 h-3 rounded-full transition-all ${
+              idx === currentIndex 
+                ? "bg-[#ff8a00] w-8" 
+                : "bg-white/40 hover:bg-white/60"
+            }`}
+            aria-label={`Go to game ${idx + 1}`}
+          />
+        ))}
       </div>
 
       {/* Animated fade-in keyframes */}
