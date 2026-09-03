@@ -153,12 +153,13 @@ export const games: GameInfo[] = [
     ],
     conclusion: "Mantenha a lei. Salve vidas. Você é Patrulha 244.",
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.Unibits.Patrulha244",
-    iconSrc: "https://play-lh.googleusercontent.com/placeholder-patrulha-244",
+    iconSrc: "https://play-lh.googleusercontent.com/ip63AnDGCj8HxsiAiEfKoRDyq9arqcEYKDIOVXd25TeIP7NasrCTN5Pea8_J4YE8KnXmeMkpXi7b8cb8nonBIw=w240-h480-rw",
     banners: [
-      "https://play-lh.googleusercontent.com/placeholder-patrulha-244-banner-1",
-      "https://play-lh.googleusercontent.com/placeholder-patrulha-244-banner-2",
-      "https://play-lh.googleusercontent.com/placeholder-patrulha-244-banner-3",
-      "https://play-lh.googleusercontent.com/placeholder-patrulha-244-banner-4"
+      "https://play-lh.googleusercontent.com/TC1fzkk23K_qgc4uKuDrQ2dNwURXh962wn7vuObggzqcTMzs6A__h_wUHTkPwf7aG-GOWto_3eyCauY_fELsTg=w526-h296-rw",
+      "https://play-lh.googleusercontent.com/0UVJUNAJhCFiC2pXOHFzEMjzp7UBBajDnEPuUW5e6Sejdz89a2yFDyKr7naY4XzVji8Hc_XshmYaEPp3KEZq=w526-h296-rw",
+      "https://play-lh.googleusercontent.com/GMfwn1AI2bv-z6ohGc_qTn3l2nus0EyaWF-1RpWzuzFVuQQCNnMTtg1E3gL34H_cdJ_Gu17SaazhRM5q_HC4EQ=w526-h296-rw",
+      "https://play-lh.googleusercontent.com/FFMpFxLmKCI-2JRV2xXZNhEiLzevHwGqVmDhVN1czoNQKVi1NlVCFYIEfCw-F_vAzwK_hfIokvBuN8K2vXtsvw=w526-h296-rw",
+      "https://play-lh.googleusercontent.com/hIJdWScOn5x90kAuAOoLq-ylyY3FJc2cVSBCKdlTefqzHnfGXvcomzlE_DxeW2k2i4L0LUKZ1Csa4MBSB_P_Vg=w526-h296-rw"
     ]
   }
 ];
