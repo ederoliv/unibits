@@ -122,5 +122,43 @@ export const games: GameInfo[] = [
       "https://play-lh.googleusercontent.com/d2eeWafIyA3vcPWEKF9PWGXTYGuXhcL-Of4q7oNsj2Br7zEhRX_tPkEKGYnxDDt7aAmSqIdT7dR5ivF1Kb7TP5o=w2560-h1440-rw",
       "https://play-lh.googleusercontent.com/CNVp2WsZI7dALrYadvMIj3z3xCzk_IXH_uaVQLhPxYd6YWMgeQHCDfTUmM548b7MxJ4eC30zyoXntGYZNT1PaA=w2560-h1440-rw",
     ]
+  },
+  {
+    id: "patrulha-244",
+    title: "Patrulha 244",
+    subtitle: "Proteja as Ruas em Tempo Real",
+    description: "Patrulha 244 é um simulador de polícia móvel que coloca você na linha de frente do patrulhamento urbano. Responda a chamadas de emergência, resolva situações de risco e mantenha a ordem nas ruas do Brasil. Com mecânicas realistas de combate, perseguição e investigação, você experimenta a adrenalina de ser um verdadeiro policial, equilibrando ação, estratégia e responsabilidade.",
+    featuresTitle: "Principais Características:",
+    features: [
+      {
+        title: "Operações de Policiamento",
+        description: "Responda a diversas chamadas de emergência: perseguições veiculares, conflitos urbanos, operações em comunidades e muito mais."
+      },
+      {
+        title: "Sistema de Reputação",
+        description: "Construa sua carreira policial com base em suas ações. Torne-se um herói comunitário ou um agente implacável - suas escolhas definem seu legado."
+      },
+      {
+        title: "Combate Tático",
+        description: "Utilize escudo balístico, armamentos variados e táticas defensivas. Cada situação exige estratégia diferente para sucesso garantido."
+      },
+      {
+        title: "Veículos Policiais Reais",
+        description: "Dirija viaturas brasileiras autênticas com sistema de sirene, luzes de emergência e dinâmica de perseguição realista."
+      },
+      {
+        title: "Modo Carreira Profundo",
+        description: "Progresse através dos postos policiais, desbloqueie novos equipamentos e participe de operações especiais cada vez mais desafiadoras."
+      }
+    ],
+    conclusion: "Mantenha a lei. Salve vidas. Você é Patrulha 244.",
+    playStoreUrl: "https://play.google.com/store/apps/details?id=com.Unibits.Patrulha244",
+    iconSrc: "https://play-lh.googleusercontent.com/placeholder-patrulha-244",
+    banners: [
+      "https://play-lh.googleusercontent.com/placeholder-patrulha-244-banner-1",
+      "https://play-lh.googleusercontent.com/placeholder-patrulha-244-banner-2",
+      "https://play-lh.googleusercontent.com/placeholder-patrulha-244-banner-3",
+      "https://play-lh.googleusercontent.com/placeholder-patrulha-244-banner-4"
+    ]
   }
 ];
