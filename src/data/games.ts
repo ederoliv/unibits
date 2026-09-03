@@ -126,32 +126,28 @@ export const games: GameInfo[] = [
   {
     id: "patrulha-244",
     title: "Patrulha 244",
-    subtitle: "Proteja as Ruas em Tempo Real",
-    description: "Patrulha 244 é um simulador de polícia móvel que coloca você na linha de frente do patrulhamento urbano. Responda a chamadas de emergência, resolva situações de risco e mantenha a ordem nas ruas do Brasil. Com mecânicas realistas de combate, perseguição e investigação, você experimenta a adrenalina de ser um verdadeiro policial, equilibrando ação, estratégia e responsabilidade.",
-    featuresTitle: "Principais Características:",
+    subtitle: "Perseguições de tirar o fôlego sem lei",
+    description: "O asfalto virou território sem lei, mas a brincadeira acabou. O governo do Estado formou a \"Patrulha 244\", uma unidade especial da polícia focada em uma única missão: tolerância zero contra manobras perigosas e fugas em vias públicas. Em Patrulha 244, você assume o papel de um oficial de elite em perseguições de tirar o fôlego. Sem suporte aéreo ou bloqueios, aqui é você contra o infrator. O sucesso depende da sua habilidade no guidão ou no volante para não deixar ninguém escapar.",
+    featuresTitle: "Recursos do Jogo:",
     features: [
       {
-        title: "Operações de Policiamento",
-        description: "Responda a diversas chamadas de emergência: perseguições veiculares, conflitos urbanos, operações em comunidades e muito mais."
+        title: "Escolha seu estilo",
+        description: "Assuma o controle de viaturas e motos, cada uma com dirigibilidade única para diferentes tipos de perseguição."
       },
       {
-        title: "Sistema de Reputação",
-        description: "Construa sua carreira policial com base em suas ações. Torne-se um herói comunitário ou um agente implacável - suas escolhas definem seu legado."
+        title: "Ambiente urbano desafiador",
+        description: "Patrulhe ruas e avenidas dinâmicas onde cada curva pode ser decisiva para a captura."
       },
       {
-        title: "Combate Tático",
-        description: "Utilize escudo balístico, armamentos variados e táticas defensivas. Cada situação exige estratégia diferente para sucesso garantido."
+        title: "Perseguições em tempo real",
+        description: "Sinta a adrenalina de caçar fugitivos que usam o tráfego e becos para tentar te despistar."
       },
       {
-        title: "Veículos Policiais Reais",
-        description: "Dirija viaturas brasileiras autênticas com sistema de sirene, luzes de emergência e dinâmica de perseguição realista."
-      },
-      {
-        title: "Modo Carreira Profundo",
-        description: "Progresse através dos postos policiais, desbloqueie novos equipamentos e participe de operações especiais cada vez mais desafiadoras."
+        title: "Foco na perícia",
+        description: "Domine a arte de interceptar veículos em alta velocidade sem perder o controle."
       }
     ],
-    conclusion: "Mantenha a lei. Salve vidas. Você é Patrulha 244.",
+    conclusion: "O \"grau\" acabou. É hora de colocar a ordem de volta nas ruas.",
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.Unibits.Patrulha244",
     iconSrc: "https://play-lh.googleusercontent.com/ip63AnDGCj8HxsiAiEfKoRDyq9arqcEYKDIOVXd25TeIP7NasrCTN5Pea8_J4YE8KnXmeMkpXi7b8cb8nonBIw=w240-h480-rw",
     banners: [
