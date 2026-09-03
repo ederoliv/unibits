@@ -92,42 +92,6 @@ export const games: GameInfo[] = [
     ]
   },
   {
-    id: "grau-chapa-br",
-    title: "Grau e Chapa BR",
-    subtitle: "Mundo Aberto, Vida Real e Muita Manobra",
-    description: "O Grau e Chapa BR é o encontro perfeito entre simulação de vida e adrenalina sobre rodas. Em um mapa de mundo aberto que mistura o clima urbano e rural do Brasil, você decide seu destino. Seja personalizando sua moto na oficina ou acelerando carros rebaixados, o jogo entrega uma experiência completa e leve, feita para rodar em qualquer dispositivo.",
-    heroDescription: "Explore um mundo aberto com carros e motos. Customize, trabalhe e viva a vida do seu jeito.",
-    featuresTitle: "Por que jogar:",
-    features: [
-      {
-        title: "Cultura das Ruas",
-        description: "Um universo que respira o cotidiano brasileiro, com carros icônicos, motos e casas que servem de base para o jogador."
-      },
-      {
-        title: "Economia Ativa",
-        description: "Comece do zero, realize entregas e progrida até colecionar SUVs e as motos mais potentes do mercado."
-      },
-      {
-        title: "Mecânicas Avançadas",
-        description: "Sistema de embreagem real para cortes de giro precisos e manobras complexas como \"suicida\" e \"pé no banco\"."
-      },
-      {
-        title: "Leve e Acessível",
-        description: "Alta fidelidade gráfica projetada para manter o desempenho estável em diversos modelos de smartphones."
-      }
-    ],
-    conclusion: "Sua vida, suas regras, seu grau.",
-    playStoreUrl: "https://play.google.com/store/apps/details?id=com.Unibits.GrauChapaBR",
-    iconSrc: "https://play-lh.googleusercontent.com/m4gdmQtwz1CYUYjB984FFS7ckaYEkxWLlVPdFfQAevfMm2IWNCjlNoME4tmgnXouHf5QtiaDfx3R1ZPlzyLYJXs=w240-h480-rw", // Placeholder
-    banners: [
-      "https://play-lh.googleusercontent.com/Vq0gaoGEG8XqwPuaoXzGCnCp67UkOcwo0moNnIN5OpKnPpkVUVyCHB-FDpx6zH5DgVLsLkY-pUjYKCGRT_31nQ=w2560-h1440-rw",
-      "https://play-lh.googleusercontent.com/BJ0o1FgZT0p1aWv8pmGOD405h1_ODgU0Y8uH0XDYo75lY23NyDh-dudaSQtvgW1k5MhyGm1IgPqeh0nDFSWfr3U=w2560-h1440-rw",
-      "https://play-lh.googleusercontent.com/RtzQ5lHcPvKlZ-zzUHjuYoyMsh5jUHV8kqGTHz0gRWxqhg-2ND-qSRwd4bzek2qbMvAKgI0swpOw5OHqSYWbLA=w2560-h1440-rw",
-      "https://play-lh.googleusercontent.com/d2eeWafIyA3vcPWEKF9PWGXTYGuXhcL-Of4q7oNsj2Br7zEhRX_tPkEKGYnxDDt7aAmSqIdT7dR5ivF1Kb7TP5o=w2560-h1440-rw",
-      "https://play-lh.googleusercontent.com/CNVp2WsZI7dALrYadvMIj3z3xCzk_IXH_uaVQLhPxYd6YWMgeQHCDfTUmM548b7MxJ4eC30zyoXntGYZNT1PaA=w2560-h1440-rw",
-    ]
-  },
-  {
     id: "patrulha-244",
     title: "Patrulha 244",
     subtitle: "Perseguições de tirar o fôlego sem lei",
