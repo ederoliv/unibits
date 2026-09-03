@@ -8,6 +8,7 @@ export interface GameInfo {
   title: string;
   subtitle: string;
   description: string;
+  heroDescription: string;
   featuresTitle: string;
   features: GameFeature[];
   conclusion: string;
@@ -22,6 +23,7 @@ export const games: GameInfo[] = [
     title: "Pocket Grau - Online",
     subtitle: "A Adrenalina do Grau na Palma da Sua Mão",
     description: "O Pocket Grau é o simulador definitivo para quem vive a cultura das ruas brasileiras. Com foco total no realismo das manobras, o jogo permite que você domine a arte de empinar com precisão e estilo. Explore um ambiente virtual vibrante, sinta a física realista em cada \"chamada\" e conecte-se com outros pilotos em uma experiência online única.",
+    heroDescription: "O simulador definitivo de grau com realismo nas manobras. Customize sua moto e domine as ruas do Brasil.",
     featuresTitle: "O que você encontra:",
     features: [
       {
@@ -57,6 +59,7 @@ export const games: GameInfo[] = [
     title: "Moto Grau BR",
     subtitle: "Sinta o Ronco e Domine a Cidade",
     description: "Focado na imersão e na variedade, o Moto Grau BR leva a pilotagem mobile a outro nível. Mais do que apenas manobras, aqui você vive a rotina de um verdadeiro piloto: desde a manutenção na oficina até o trabalho nas ruas para conquistar sua próxima moto de luxo. Com gráficos otimizados e suporte a controles, a liberdade é total.",
+    heroDescription: "Vive a vida de piloto em um mundo aberto. Trabalhe, customize e realize as manobras mais radicais.",
     featuresTitle: "Destaques da Experiência:",
     features: [
       {
@@ -93,6 +96,7 @@ export const games: GameInfo[] = [
     title: "Grau e Chapa BR",
     subtitle: "Mundo Aberto, Vida Real e Muita Manobra",
     description: "O Grau e Chapa BR é o encontro perfeito entre simulação de vida e adrenalina sobre rodas. Em um mapa de mundo aberto que mistura o clima urbano e rural do Brasil, você decide seu destino. Seja personalizando sua moto na oficina ou acelerando carros rebaixados, o jogo entrega uma experiência completa e leve, feita para rodar em qualquer dispositivo.",
+    heroDescription: "Explore um mundo aberto com carros e motos. Customize, trabalhe e viva a vida do seu jeito.",
     featuresTitle: "Por que jogar:",
     features: [
       {
@@ -128,6 +132,7 @@ export const games: GameInfo[] = [
     title: "Patrulha 244",
     subtitle: "Perseguições de tirar o fôlego sem lei",
     description: "O asfalto virou território sem lei, mas a brincadeira acabou. O governo do Estado formou a \"Patrulha 244\", uma unidade especial da polícia focada em uma única missão: tolerância zero contra manobras perigosas e fugas em vias públicas. Em Patrulha 244, você assume o papel de um oficial de elite em perseguições de tirar o fôlego. Sem suporte aéreo ou bloqueios, aqui é você contra o infrator. O sucesso depende da sua habilidade no guidão ou no volante para não deixar ninguém escapar.",
+    heroDescription: "A lei está voltando para as ruas. Você é um policial de elite em perseguições perigosas.",
     featuresTitle: "Recursos do Jogo:",
     features: [
       {

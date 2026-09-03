@@ -48,7 +48,7 @@ export default function HeroCarousel() {
         </p>
         
         <p className="text-[clamp(0.85rem,1.8vw,1rem)] text-white/90 max-w-[680px] mx-auto mb-8 leading-[1.6] drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]">
-          {game.description}
+          {game.heroDescription}
         </p>
         
         <div className="flex gap-4 justify-center flex-wrap">
