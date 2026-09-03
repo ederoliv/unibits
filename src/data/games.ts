@@ -8,6 +8,7 @@ export interface GameInfo {
   title: string;
   subtitle: string;
   description: string;
+  heroDescription: string;
   featuresTitle: string;
   features: GameFeature[];
   conclusion: string;
@@ -22,6 +23,7 @@ export const games: GameInfo[] = [
     title: "Pocket Grau - Online",
     subtitle: "A Adrenalina do Grau na Palma da Sua Mão",
     description: "O Pocket Grau é o simulador definitivo para quem vive a cultura das ruas brasileiras. Com foco total no realismo das manobras, o jogo permite que você domine a arte de empinar com precisão e estilo. Explore um ambiente virtual vibrante, sinta a física realista em cada \"chamada\" e conecte-se com outros pilotos em uma experiência online única.",
+    heroDescription: "O simulador definitivo de grau com realismo nas manobras. Customize sua moto e domine as ruas do Brasil.",
     featuresTitle: "O que você encontra:",
     features: [
       {
@@ -57,6 +59,7 @@ export const games: GameInfo[] = [
     title: "Moto Grau BR",
     subtitle: "Sinta o Ronco e Domine a Cidade",
     description: "Focado na imersão e na variedade, o Moto Grau BR leva a pilotagem mobile a outro nível. Mais do que apenas manobras, aqui você vive a rotina de um verdadeiro piloto: desde a manutenção na oficina até o trabalho nas ruas para conquistar sua próxima moto de luxo. Com gráficos otimizados e suporte a controles, a liberdade é total.",
+    heroDescription: "Vive a vida de piloto em um mundo aberto. Trabalhe, customize e realize as manobras mais radicais.",
     featuresTitle: "Destaques da Experiência:",
     features: [
       {
@@ -89,38 +92,41 @@ export const games: GameInfo[] = [
     ]
   },
   {
-    id: "grau-chapa-br",
-    title: "Grau e Chapa BR",
-    subtitle: "Mundo Aberto, Vida Real e Muita Manobra",
-    description: "O Grau e Chapa BR é o encontro perfeito entre simulação de vida e adrenalina sobre rodas. Em um mapa de mundo aberto que mistura o clima urbano e rural do Brasil, você decide seu destino. Seja personalizando sua moto na oficina ou acelerando carros rebaixados, o jogo entrega uma experiência completa e leve, feita para rodar em qualquer dispositivo.",
-    featuresTitle: "Por que jogar:",
+    id: "patrulha-244",
+    title: "Patrulha 244",
+    subtitle: "Perseguições de tirar o fôlego sem lei",
+    description: "O asfalto virou território sem lei, mas a brincadeira acabou. O governo do Estado formou a \"Patrulha 244\", uma unidade especial da polícia focada em uma única missão: tolerância zero contra manobras perigosas e fugas em vias públicas. Em Patrulha 244, você assume o papel de um oficial de elite em perseguições de tirar o fôlego. Sem suporte aéreo ou bloqueios, aqui é você contra o infrator. O sucesso depende da sua habilidade no guidão ou no volante para não deixar ninguém escapar.",
+    heroDescription: "A lei está voltando para as ruas. Você é um policial de elite em perseguições perigosas.",
+    featuresTitle: "Recursos do Jogo:",
     features: [
       {
-        title: "Cultura das Ruas",
-        description: "Um universo que respira o cotidiano brasileiro, com carros icônicos, motos e casas que servem de base para o jogador."
+        title: "Escolha seu estilo",
+        description: "Assuma o controle de viaturas e motos, cada uma com dirigibilidade única para diferentes tipos de perseguição."
       },
       {
-        title: "Economia Ativa",
-        description: "Comece do zero, realize entregas e progrida até colecionar SUVs e as motos mais potentes do mercado."
+        title: "Ambiente urbano desafiador",
+        description: "Patrulhe ruas e avenidas dinâmicas onde cada curva pode ser decisiva para a captura."
       },
       {
-        title: "Mecânicas Avançadas",
-        description: "Sistema de embreagem real para cortes de giro precisos e manobras complexas como \"suicida\" e \"pé no banco\"."
+        title: "Perseguições em tempo real",
+        description: "Sinta a adrenalina de caçar fugitivos que usam o tráfego e becos para tentar te despistar."
       },
       {
-        title: "Leve e Acessível",
-        description: "Alta fidelidade gráfica projetada para manter o desempenho estável em diversos modelos de smartphones."
+        title: "Foco na perícia",
+        description: "Domine a arte de interceptar veículos em alta velocidade sem perder o controle."
       }
     ],
-    conclusion: "Sua vida, suas regras, seu grau.",
-    playStoreUrl: "https://play.google.com/store/apps/details?id=com.Unibits.GrauChapaBR",
-    iconSrc: "https://play-lh.googleusercontent.com/m4gdmQtwz1CYUYjB984FFS7ckaYEkxWLlVPdFfQAevfMm2IWNCjlNoME4tmgnXouHf5QtiaDfx3R1ZPlzyLYJXs=w240-h480-rw", // Placeholder
+    conclusion: "O \"grau\" acabou. É hora de colocar a ordem de volta nas ruas.",
+    playStoreUrl: "https://play.google.com/store/apps/details?id=com.Unibits.Patrulha244",
+    iconSrc: "https://play-lh.googleusercontent.com/ip63AnDGCj8HxsiAiEfKoRDyq9arqcEYKDIOVXd25TeIP7NasrCTN5Pea8_J4YE8KnXmeMkpXi7b8cb8nonBIw=w240-h480-rw",
     banners: [
-      "https://play-lh.googleusercontent.com/Vq0gaoGEG8XqwPuaoXzGCnCp67UkOcwo0moNnIN5OpKnPpkVUVyCHB-FDpx6zH5DgVLsLkY-pUjYKCGRT_31nQ=w2560-h1440-rw",
-      "https://play-lh.googleusercontent.com/BJ0o1FgZT0p1aWv8pmGOD405h1_ODgU0Y8uH0XDYo75lY23NyDh-dudaSQtvgW1k5MhyGm1IgPqeh0nDFSWfr3U=w2560-h1440-rw",
-      "https://play-lh.googleusercontent.com/RtzQ5lHcPvKlZ-zzUHjuYoyMsh5jUHV8kqGTHz0gRWxqhg-2ND-qSRwd4bzek2qbMvAKgI0swpOw5OHqSYWbLA=w2560-h1440-rw",
-      "https://play-lh.googleusercontent.com/d2eeWafIyA3vcPWEKF9PWGXTYGuXhcL-Of4q7oNsj2Br7zEhRX_tPkEKGYnxDDt7aAmSqIdT7dR5ivF1Kb7TP5o=w2560-h1440-rw",
-      "https://play-lh.googleusercontent.com/CNVp2WsZI7dALrYadvMIj3z3xCzk_IXH_uaVQLhPxYd6YWMgeQHCDfTUmM548b7MxJ4eC30zyoXntGYZNT1PaA=w2560-h1440-rw",
+      "https://play-lh.googleusercontent.com/gxI08VONWgfYCOqv7UcAChRBwtw3KTK_OE_fsgd7pvvjmWDjWlGLrAqJdwucCo-a2e0bbYAxUQflrQ88bjS2TwA=w2560-h1440-rw",
+      "https://play-lh.googleusercontent.com/FFMpFxLmKCI-2JRV2xXZNhEiLzevHwGqVmDhVN1czoNQKVi1NlVCFYIEfCw-F_vAzwK_hfIokvBuN8K2vXtsvw=w2560-h1440-rw",
+      "https://play-lh.googleusercontent.com/lCGWbecgRlBU_AhG0nie5Wyb3mY7q4pEzjp59j8Ikc2d2zRE_E9kpP1bbkT2_js9Y4BHtan5H5PDptTI3j8j=w2560-h1440-rw",
+      "https://play-lh.googleusercontent.com/0UVJUNAJhCFiC2pXOHFzEMjzp7UBBajDnEPuUW5e6Sejdz89a2yFDyKr7naY4XzVji8Hc_XshmYaEPp3KEZq=w2560-h1440-rw",
+      "https://play-lh.googleusercontent.com/hIJdWScOn5x90kAuAOoLq-ylyY3FJc2cVSBCKdlTefqzHnfGXvcomzlE_DxeW2k2i4L0LUKZ1Csa4MBSB_P_Vg=w2560-h1440-rw",
+      "https://play-lh.googleusercontent.com/GMfwn1AI2bv-z6ohGc_qTn3l2nus0EyaWF-1RpWzuzFVuQQCNnMTtg1E3gL34H_cdJ_Gu17SaazhRM5q_HC4EQ=w2560-h1440-rw",
+      "https://play-lh.googleusercontent.com/zQom3TvxeGCDYdS7o5nRSgnXCG6Anj2bGD4SW-SaxTCcGCne7-lo8FzQEaQauTCBpDBPDWfuiSxzdA0eWUMIDBA=w2560-h1440-rw"
     ]
   }
 ];

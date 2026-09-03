@@ -1,54 +1,13 @@
 import { MonitorPlay, Camera, MessageCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import { games } from "../data/games";
+import HeroCarousel from "../components/HeroCarousel";
 
 export default function Home() {
   return (
     <>
-      {/* ── HERO ────────────────────────────────────────────────────────────── */}
-      <section className="min-h-[90vh] flex flex-col items-center justify-center text-center px-6 relative overflow-hidden w-full pt-32 pb-20">
-        
-        {/* Background Image Full Bleed */}
-        <div className="absolute inset-0 w-full h-full z-0">
-          <img 
-            src="/pocket_grau-banner.png" 
-            alt="Banner principal" 
-            className="w-full h-full object-cover" 
-          />
-          {/* Overlay escuro leve para garantir leitura do texto */}
-          <div className="absolute inset-0 bg-[#0b0b0b]/50" />
-        </div>
-
-        {/* Background gradient decoration */}
-        <div className="absolute inset-0 z-0 pointer-events-none bg-[radial-gradient(ellipse_80%_60%_at_50%_0%,rgba(255,138,0,0.15)_0%,transparent_70%)]" />
-
-        <div className="relative z-10 max-w-[1440px]">
-          <span className="text-[12px] font-bold tracking-[3px] text-[#ff8a00] uppercase drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
-            Unibits Studios
-          </span>
-          <h1 className="text-[clamp(2.8rem,8vw,6rem)] font-black leading-[1.05] my-4 md:my-6 tracking-[-2px] drop-shadow-[0_4px_10px_rgba(0,0,0,0.7)]">
-            Domine as Ruas
-          </h1>
-          <p className="text-[clamp(1rem,2.5vw,1.3rem)] text-white max-w-[560px] mx-auto mb-10 leading-[1.6] drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]">
-            Sinta a adrenalina do grau na palma da sua mão. Personalize sua moto e mostre quem manda na quebrada.
-          </p>
-          <div className="flex gap-4 justify-center flex-wrap">
-            <a
-              href="/jogo/pocket-grau"
-              className="bg-white text-black px-9 py-3.5 rounded-full font-bold no-underline text-sm tracking-[0.5px] hover:bg-neutral-200 transition-colors"
-            >
-              CONHEÇA
-            </a>
-            <a
-              href="https://play.google.com/store/apps/details?id=com.Unibits.PocketGrau"
-              className="bg-white text-black px-9 py-3.5 rounded-full font-bold no-underline text-sm tracking-[0.5px] hover:bg-neutral-200 transition-colors"
-              target="_blank"
-            >
-              Ver na Play Store
-            </a>
-          </div>
-        </div>
-      </section>
+      {/* ── HERO CAROUSEL ────────────────────────────────────────────────────── */}
+      <HeroCarousel />
 
       {/* ── SOBRE ───────────────────────────────────────────────────────────── */}
       <section id="sobre" className="py-20 px-6 bg-[#0e0e0e] border-y border-[#222] w-full">
