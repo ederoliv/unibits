@@ -128,5 +128,23 @@ export const games: GameInfo[] = [
       "https://play-lh.googleusercontent.com/GMfwn1AI2bv-z6ohGc_qTn3l2nus0EyaWF-1RpWzuzFVuQQCNnMTtg1E3gL34H_cdJ_Gu17SaazhRM5q_HC4EQ=w2560-h1440-rw",
       "https://play-lh.googleusercontent.com/zQom3TvxeGCDYdS7o5nRSgnXCG6Anj2bGD4SW-SaxTCcGCne7-lo8FzQEaQauTCBpDBPDWfuiSxzdA0eWUMIDBA=w2560-h1440-rw"
     ]
+  },
+  {
+    id: "elite-carros-br",
+    title: "Elite Carros BR",
+    subtitle: "Em breve - Coming Soon",
+    description: "Em desenvolvimento. Página de jogo placeholder com conteúdo a ser atualizado.",
+    heroDescription: "Em breve: Elite Carros BR. Fique ligado para screenshots e detalhes.",
+    featuresTitle: "Em desenvolvimento",
+    features: [
+      { title: "Em breve", description: "Conteúdo a ser adicionado." },
+      { title: "Em breve", description: "Conteúdo a ser adicionado." }
+    ],
+    conclusion: "Em breve.",
+    playStoreUrl: "#",
+    iconSrc: "/unibits-logo.png",
+    banners: [
+      "/unibits-logo.png"
+    ]
   }
 ];
