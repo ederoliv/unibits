@@ -1,4 +1,4 @@
-export interface GameFeature {
+﻿export interface GameFeature {
   title: string;
   description: string;
 }
@@ -45,13 +45,12 @@ export const games: GameInfo[] = [
     ],
     conclusion: "Prepare sua nave e mostre quem manda na quebrada!",
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.Unibits.PocketGrau",
-    iconSrc: "https://play-lh.googleusercontent.com/CXUHd_p6K57h6m8CEOVYT3Fdkb5kDzlNmDNGrBpwwrJ3eZAe-RMHbFSo_pJW8O8xNAdAyzPJa6IOzGdpFb1Qh8I=w240-h480-rw", // Placeholder
+    iconSrc: "https://play-lh.googleusercontent.com/CXUHd_p6K57h6m8CEOVYT3Fdkb5kDzlNmDNGrBpwwrJ3eZAe-RMHbFSo_pJW8O8xNAdAyzPJa6IOzGdpFb1Qh8I=w240-h480-rw",
     banners: [
       "https://play-lh.googleusercontent.com/jo_unrrEPqweT6nohrf0t3DbF98hRT9D6B_5NPBWsG9Rnnf9MUgeBLacUA1HUwry70IAmhpNeEi7BN_2HYdt=w2560-h1440-rw",
       "https://play-lh.googleusercontent.com/0fJk4L30wrrntqsDzUK33C_aaRXtBqGlHP7Db2Idupkn3aq4m3xgFaQCeOj0Z8B3ZV17xlBlmekJv8j42NHkBYI=w2560-h1440-rw",
       "https://play-lh.googleusercontent.com/yGjE7Rk1A3xYsyoL-PlegQgnDrbkXsb-uwEreBLTH_u0n2PsU734180FpYAvU-tDB3QtLrVttC4nPWz4n0-r-g=w2560-h1440-rw",
       "https://play-lh.googleusercontent.com/Rt900JH0oJjFdKAmtfA6c-KPIsOmfEoNrv5AL1xCbEK-DD_DM1xhT4ajupN_T3qdfr5maOJalb9qsqzq4s7lsw=w2560-h1440-rw"
-      
     ]
   },
   {
@@ -80,15 +79,14 @@ export const games: GameInfo[] = [
       }
     ],
     conclusion: "Trabalhe, conquiste e empine com estilo.",
-    playStoreUrl: "https://play.google.com/store/apps/details?id=com.Unibits.MotoGrauBrasil", 
+    playStoreUrl: "https://play.google.com/store/apps/details?id=com.Unibits.MotoGrauBrasil",
     iconSrc: "https://play-lh.googleusercontent.com/Eti6zDxukrYbompKRg_rCJyItB-T4jQIzg8EbRMC5yKBPnvxz3hkvBkeT18m7jh0UQ=w240-h480-rw",
     banners: [
       "https://play-lh.googleusercontent.com/MxjHBH1m-I603Nug9btVSB3f8W9-71yFCThOcdFIkXhMUAaIu0JTByrEQqIQv3nvtfUX=w2560-h1440-rw",
       "https://play-lh.googleusercontent.com/_gUw08FzAjSoBVfEA91RLx_BMJ4zbsZZBM7bXnCCxtakmuL1YZNa9uw9Z2AbPZcwQws=w2560-h1440-rw",
       "https://play-lh.googleusercontent.com/uDy9vir7WMtmEh0EJ6dm-rcJDJcSpXFEKsx5d2Cwbz12oxegZRGZ0-2gk7IEhfdY_-w=w2560-h1440-rw",
       "https://play-lh.googleusercontent.com/MUhXeexM8OhltAE2VDbKfxu_6rxyQF5j_mlL1lmliJFBUMhzj-Vswu_98TnrMS7U314l=w2560-h1440-rw",
-      "https://play-lh.googleusercontent.com/08Ja8_-uV2uqNnfv_RwR0PBLhPN43Qkru8BEspaiiyxL7CR2MMo_tabuUNynV9bSRrM=w2560-h1440-rw",
-
+      "https://play-lh.googleusercontent.com/08Ja8_-uV2uqNnfv_RwR0PBLhPN43Qkru8BEspaiiyxL7CR2MMo_tabuUNynV9bSRrM=w2560-h1440-rw"
     ]
   },
   {
@@ -127,6 +125,24 @@ export const games: GameInfo[] = [
       "https://play-lh.googleusercontent.com/hIJdWScOn5x90kAuAOoLq-ylyY3FJc2cVSBCKdlTefqzHnfGXvcomzlE_DxeW2k2i4L0LUKZ1Csa4MBSB_P_Vg=w2560-h1440-rw",
       "https://play-lh.googleusercontent.com/GMfwn1AI2bv-z6ohGc_qTn3l2nus0EyaWF-1RpWzuzFVuQQCNnMTtg1E3gL34H_cdJ_Gu17SaazhRM5q_HC4EQ=w2560-h1440-rw",
       "https://play-lh.googleusercontent.com/zQom3TvxeGCDYdS7o5nRSgnXCG6Anj2bGD4SW-SaxTCcGCne7-lo8FzQEaQauTCBpDBPDWfuiSxzdA0eWUMIDBA=w2560-h1440-rw"
+    ]
+  },
+  {
+    id: "elite-carros-br",
+    title: "Elite Carros BR",
+    subtitle: "Em breve - Coming Soon",
+    description: "Em desenvolvimento. Página de jogo placeholder com conteúdo a ser atualizado.",
+    heroDescription: "Em breve: Elite Carros BR. Fique ligado para screenshots e detalhes.",
+    featuresTitle: "Em desenvolvimento",
+    features: [
+      { title: "Em breve", description: "Conteúdo a ser adicionado." },
+      { title: "Em breve", description: "Conteúdo a ser adicionado." }
+    ],
+    conclusion: "Em breve.",
+    playStoreUrl: "#",
+    iconSrc: "/unibits-logo.png",
+    banners: [
+      "/unibits-logo.png"
     ]
   }
 ];
