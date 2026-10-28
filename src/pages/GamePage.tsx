@@ -1,84 +1,111 @@
-import { useParams, Navigate } from "react-router-dom";
+import { ArrowLeft, ArrowUpRight } from "lucide-react";
+import { Link, Navigate, useParams } from "react-router-dom";
 import { games } from "../data/games";
 import Carousel from "../components/Carousel";
 
 export default function GamePage() {
   const { id } = useParams<{ id: string }>();
-  const game = games.find((g) => g.id === id);
+  const game = games.find((item) => item.id === id);
 
   if (!game) {
     return <Navigate to="/" />;
   }
 
   return (
-    <div className="w-full flex flex-col">
-      {/* Hero section with carousel and logo/title overlay */}
-      <section className="relative w-full pt-28 pb-10 flex justify-center px-0 md:px-4">
-        <div className="w-full md:w-[70%] max-w-[1440px] relative rounded-none md:rounded-[2.5rem] overflow-hidden border border-x-0 md:border-x border-[#333] shadow-2xl">
-          <Carousel images={game.banners} />
-          
-          {/* Overlay Content */}
-          <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none z-10 px-6">
-            <img 
-              src={game.iconSrc} 
-              alt={`Ícone ${game.title}`} 
-              className="w-20 h-20 md:w-28 md:h-28 rounded-3xl shadow-2xl mb-4 md:mb-6 object-cover border border-[#222]" 
-              onError={(e) => {
-                 // Fallback icon placeholder if not provided
-                 e.currentTarget.src = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" rx="32" fill="%23222"/><text x="50" y="50" fill="%23ff8a00" font-family="sans-serif" font-weight="bold" font-size="20" text-anchor="middle" alignment-baseline="middle">APP</text></svg>';
-              }}
-            />
-            <h1 className="text-[clamp(2.2rem,5vw,4rem)] font-black leading-tight text-white mb-2 tracking-[-1px] text-center drop-shadow-[0_4px_10px_rgba(0,0,0,0.8)]">
-              {game.title}
-            </h1>
+    <div className="min-h-screen bg-[#202020] pb-20 pt-24 text-white md:pt-28">
+      <section className="px-0 md:px-6">
+        <div className="mx-auto max-w-[1200px]">
+          <div className="relative overflow-hidden rounded-none bg-[#292929] md:rounded-[2rem]">
+            <Carousel images={game.banners} />
+            <div className="pointer-events-none absolute inset-0 z-10 flex flex-col items-center justify-center bg-gradient-to-t from-black/70 via-black/20 to-black/20 px-6 text-center">
+              <img
+                src={game.iconSrc}
+                alt={`Ícone ${game.title}`}
+                className="mb-5 h-20 w-20 rounded-3xl object-cover shadow-2xl md:h-28 md:w-28"
+                onError={(event) => {
+                  event.currentTarget.src = "/unibits-logo.png";
+                }}
+              />
+              {game.isComingSoon && (
+                <span className="mb-3 rounded-full bg-[#ffbd3f] px-4 py-2 text-xs font-black uppercase tracking-wider text-[#171717]">
+                  Em breve
+                </span>
+              )}
+              <h1 className="text-[clamp(2.2rem,5vw,4.5rem)] font-black leading-tight tracking-[-0.06em] text-white drop-shadow-lg">
+                {game.title}<span className="text-[#ffbd3f]">.</span>
+              </h1>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Content section */}
-      <section className="py-20 px-6 max-w-[900px] mx-auto w-full">
-        <div className="text-center mb-16">
-          <h2 className="text-[clamp(1.5rem,4vw,2.5rem)] font-extrabold text-[#ff8a00] mb-6 leading-tight tracking-[-0.5px]">
+      <section className="mx-auto max-w-[1000px] px-6 pt-16 md:pt-24">
+        <Link
+          to="/"
+          className="inline-flex items-center gap-2 text-sm font-bold text-white/50 no-underline transition-colors hover:text-[#ffbd3f]"
+        >
+          <ArrowLeft size={16} /> Voltar para Unibits
+        </Link>
+
+        <div className="mx-auto mt-12 max-w-[760px] text-center md:mt-16">
+          <p className="mb-4 text-xs font-bold uppercase tracking-[0.3em] text-[#ffbd3f]">
+            {game.isComingSoon ? "Novo projeto" : "Jogo mobile"}
+          </p>
+          <h2 className="text-[clamp(1.7rem,4vw,3rem)] font-bold leading-tight tracking-[-0.04em] text-white">
             {game.subtitle}
           </h2>
-          <p className="text-white/80 leading-[1.8] text-[16px] md:text-[18px]">
+          <p className="mt-6 text-base leading-[1.85] text-white/60 md:text-lg">
             {game.description}
           </p>
         </div>
 
-        <div className="mt-16 text-center">
-          <h3 className="text-2xl font-bold mb-8 border-b border-[#222] pb-4 inline-block px-8">
-            {game.featuresTitle}
-          </h3>
-          <div className="flex flex-col gap-8 items-center">
-            {game.features.map((feature, idx) => (
-              <div key={idx} className="max-w-[700px]">
-                <h4 className="text-[18px] font-bold text-white mb-2">{feature.title}</h4>
-                <p className="text-white/70 leading-[1.8] text-[15px] mx-auto">{feature.description}</p>
-              </div>
+        <div className="mt-20">
+          <div className="mb-10 text-center">
+            <p className="mb-3 text-xs font-bold uppercase tracking-[0.3em] text-[#ffbd3f]">
+              Descubra
+            </p>
+            <h3 className="text-2xl font-black tracking-tight text-white md:text-3xl">
+              {game.featuresTitle}
+            </h3>
+          </div>
+          <div className="grid gap-x-12 gap-y-10 md:grid-cols-2">
+            {game.features.map((feature, index) => (
+              <article key={`${feature.title}-${index}`} className="rounded-3xl bg-[#191919] p-7 md:p-8">
+                <span className="text-sm font-bold tracking-widest text-[#ffbd3f]">UNIBITS</span>
+                <h4 className="mt-5 text-xl font-bold text-white">{feature.title}</h4>
+                <p className="mt-3 text-sm leading-relaxed text-white/55 md:text-base">
+                  {feature.description}
+                </p>
+              </article>
             ))}
           </div>
         </div>
 
-        <div className="mt-20 text-center bg-[#111] p-10 rounded-3xl border border-[#222]">
-          <p className="text-[18px] text-white/90 font-medium mb-8 leading-relaxed">
+        <div className="mt-16 rounded-[2rem] bg-[#191919] px-6 py-10 text-center md:mt-20 md:px-12 md:py-14">
+          <p className="mx-auto max-w-2xl text-xl font-semibold leading-relaxed text-white md:text-2xl">
             {game.conclusion}
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a
-              href={game.playStoreUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-[#ff8a00] text-black px-10 py-4 rounded-full font-bold no-underline text-[16px] hover:bg-[#e07900] transition-transform hover:-translate-y-1 inline-block shadow-lg"
-            >
-              BAIXAR NA PLAY STORE
-            </a>
+          <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+            {game.isComingSoon ? (
+              <span className="rounded-full bg-white/5 px-8 py-4 text-sm font-black uppercase tracking-wider text-[#ffbd3f]">
+                Em breve
+              </span>
+            ) : (
+              <a
+                href={game.playStoreUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-full bg-[#ffbd3f] px-8 py-4 text-sm font-black uppercase tracking-wide text-[#171717] no-underline transition-transform hover:-translate-y-0.5"
+              >
+                Baixar na Play Store <ArrowUpRight size={17} />
+              </a>
+            )}
             {game.id === "pocket-grau" && (
               <a
                 href="https://drive.google.com/drive/folders/1MjsuOIgr2kf-JulKPqkdqXBnaId7MjGO?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-transparent border-2 border-[#ff8a00] text-[#ff8a00] px-10 py-4 rounded-full font-bold no-underline text-[16px] hover:bg-[#ff8a00]/10 transition-transform hover:-translate-y-1 inline-block shadow-lg"
+                className="rounded-full bg-white/5 px-8 py-4 text-sm font-bold text-white no-underline transition-colors hover:bg-white/10"
               >
                 Skins padrão do Pocket Grau
               </a>

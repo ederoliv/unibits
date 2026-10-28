@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { games } from "../data/games";
+import { ArrowDown, ArrowUpRight } from "lucide-react";
 
 export default function HeroCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -16,89 +17,97 @@ export default function HeroCarousel() {
   const game = games[currentIndex];
 
   return (
-    <section className="min-h-[70vh] flex flex-col items-center justify-center text-center px-6 relative overflow-hidden w-full pt-24 pb-32">
-      {/* Animated Background with current game banner */}
-      <div className="absolute inset-0 w-full h-full z-0 transition-opacity duration-1000">
-        <img 
-          src={game.banners[0]} 
-          alt={game.title} 
-          className="w-full h-full object-cover" 
-          onError={(e) => {
-            e.currentTarget.src = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 1200 600"><rect width="1200" height="600" fill="%231a1a1a"/></svg>';
-          }}
-        />
-        {/* Overlay escuro para garantir leitura do texto */}
-        <div className="absolute inset-0 bg-[#0b0b0b]/60" />
-      </div>
+    <section className="relative isolate overflow-hidden bg-[#202020] px-6 pb-16 pt-32 md:pb-20 md:pt-36">
+      <div className="pointer-events-none absolute -right-32 -top-40 h-[34rem] w-[34rem] rounded-full bg-[#ffbd3f]/10 blur-[120px]" />
+      <div className="mx-auto grid min-h-[480px] max-w-[1200px] items-center gap-12 md:grid-cols-[0.9fr_1.1fr]">
+        <div key={game.id} className="relative z-10 hero-copy">
+          <p className="mb-5 flex items-center gap-3 text-xs font-bold uppercase tracking-[0.25em] text-[#ffbd3f]">
+            <span className="h-px w-8 bg-[#ffbd3f]" />
+            Unibits Studios
+          </p>
+          <h1 className="max-w-[620px] text-[clamp(3rem,7vw,6.8rem)] font-black leading-[0.9] tracking-[-0.07em] text-white">
+            {game.title}<span className="text-[#ffbd3f]">.</span>
+          </h1>
+          <p className="mt-6 max-w-xl text-lg font-semibold leading-snug text-white/85 md:text-2xl">
+            {game.subtitle}
+          </p>
+          <p className="mt-4 max-w-lg text-sm leading-relaxed text-white/55 md:text-base">
+            {game.heroDescription}
+          </p>
+          <div className="mt-8 flex flex-wrap items-center gap-3">
+            <Link
+              to={`/jogo/${game.id}`}
+              className="inline-flex items-center gap-2 rounded-full bg-[#ffbd3f] px-6 py-3.5 text-sm font-black uppercase tracking-wide text-[#171717] no-underline transition-transform hover:-translate-y-0.5"
+            >
+              Conheça <ArrowUpRight size={17} />
+            </Link>
+            {game.isComingSoon ? (
+              <span className="rounded-full bg-white/5 px-6 py-3.5 text-sm font-bold uppercase tracking-wide text-white/60">
+                Em breve
+              </span>
+            ) : (
+              <a
+                href={game.playStoreUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-full bg-white/5 px-6 py-3.5 text-sm font-bold uppercase tracking-wide text-white no-underline transition-colors hover:bg-white/10 hover:text-[#ffbd3f]"
+              >
+                Play Store
+              </a>
+            )}
+          </div>
+        </div>
 
-      {/* Background gradient decoration */}
-      <div className="absolute inset-0 z-0 pointer-events-none bg-[radial-gradient(ellipse_80%_60%_at_50%_0%,rgba(255,138,0,0.15)_0%,transparent_70%)]" />
-
-      <div className="relative z-10 max-w-[1440px] w-full flex flex-col items-center justify-center h-full">
-        <span className="text-[12px] font-bold tracking-[3px] text-[#ff8a00] uppercase drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
-          Unibits Studios
-        </span>
-        
-        <h1 className="text-[clamp(2.2rem,6vw,4.5rem)] font-black leading-[1.05] my-3 md:my-4 tracking-[-2px] drop-shadow-[0_4px_10px_rgba(0,0,0,0.7)] animate-fade-in">
-          {game.title}
-        </h1>
-        
-        <p className="text-[clamp(0.9rem,2vw,1.2rem)] text-[#ff8a00] font-bold max-w-[600px] mx-auto mb-3 leading-[1.4] drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
-          {game.subtitle}
-        </p>
-        
-        <p className="text-[clamp(0.85rem,1.8vw,1rem)] text-white/90 max-w-[680px] mx-auto mb-8 leading-[1.6] drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]">
-          {game.heroDescription}
-        </p>
-        
-        <div className="flex gap-4 justify-center flex-wrap">
-          <Link
-            to={`/jogo/${game.id}`}
-            className="bg-white text-black px-9 py-3.5 rounded-full font-bold no-underline text-sm tracking-[0.5px] hover:bg-neutral-200 transition-colors"
-          >
-            CONHEÇA
-          </Link>
-          <a
-            href={game.playStoreUrl}
-            className="bg-[#ff8a00] text-black px-9 py-3.5 rounded-full font-bold no-underline text-sm tracking-[0.5px] hover:bg-[#e07900] transition-colors"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Play Store
-          </a>
+        <div key={`${game.id}-art`} className="relative">
+          <div className="relative aspect-[16/11] overflow-hidden rounded-[1.5rem] bg-[#2c2c2c] shadow-2xl">
+            <img
+              src={game.banners[0]}
+              alt={`Imagem de ${game.title}`}
+              className="h-full w-full object-cover"
+              onError={(event) => {
+                event.currentTarget.src = game.iconSrc;
+              }}
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+            <div className="absolute bottom-5 left-5 flex items-center gap-3 md:bottom-7 md:left-7">
+              <img src={game.iconSrc} alt="" className="h-12 w-12 rounded-xl object-cover shadow-lg md:h-14 md:w-14" />
+              <span className="text-xs font-bold uppercase tracking-[0.2em] text-white/85">
+                {game.isComingSoon ? "Em desenvolvimento" : "Conheça o jogo"}
+              </span>
+            </div>
+          </div>
         </div>
       </div>
 
-      {/* Carousel indicators - positioned at the very bottom */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-20 pointer-events-auto">
-        {games.map((_, idx) => (
-          <button
-            key={idx}
-            onClick={() => setCurrentIndex(idx)}
-            className={`w-3 h-3 rounded-full transition-all ${
-              idx === currentIndex 
-                ? "bg-[#ff8a00] w-8" 
-                : "bg-white/40 hover:bg-white/60"
-            }`}
-            aria-label={`Go to game ${idx + 1}`}
-          />
-        ))}
+      <div className="mx-auto mt-10 flex max-w-[1200px] items-center justify-between pt-5">
+        <a href="#sobre" className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-white/45 no-underline transition-colors hover:text-white">
+          Role para explorar <ArrowDown size={15} />
+        </a>
+        <div className="flex items-center gap-2" aria-label="Escolher jogo em destaque">
+          {games.map((item, index) => (
+            <button
+              key={item.id}
+              onClick={() => setCurrentIndex(index)}
+              className={`h-2 rounded-full transition-all ${
+                index === currentIndex ? "w-8 bg-[#ffbd3f]" : "w-2 bg-white/30 hover:bg-white/60"
+              }`}
+              aria-label={`Mostrar ${item.title}`}
+              aria-pressed={index === currentIndex}
+            />
+          ))}
+        </div>
+        <span className="hidden text-xs font-bold tracking-widest text-white/35 sm:block">
+          {String(currentIndex + 1).padStart(2, "0")} / {String(games.length).padStart(2, "0")}
+        </span>
       </div>
-
-      {/* Animated fade-in keyframes */}
       <style>{`
-        @keyframes fadeIn {
-          from {
-            opacity: 0;
-            transform: translateY(10px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
+        @keyframes heroReveal {
+          from { opacity: 0; transform: translateY(12px); }
+          to { opacity: 1; transform: translateY(0); }
         }
-        .animate-fade-in {
-          animation: fadeIn 0.6s ease-out;
+        .hero-copy { animation: heroReveal 450ms ease-out; }
+        @media (prefers-reduced-motion: reduce) {
+          .hero-copy { animation: none; }
         }
       `}</style>
     </section>

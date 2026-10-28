@@ -12,6 +12,7 @@ export interface GameInfo {
   featuresTitle: string;
   features: GameFeature[];
   conclusion: string;
+  isComingSoon?: boolean;
   playStoreUrl: string;
   iconSrc: string;
   banners: string[];
@@ -139,6 +140,7 @@ export const games: GameInfo[] = [
       { title: "Em breve", description: "Conteúdo a ser adicionado." }
     ],
     conclusion: "Em breve.",
+    isComingSoon: true,
     playStoreUrl: "#",
     iconSrc: "/unibits-logo.png",
     banners: [
