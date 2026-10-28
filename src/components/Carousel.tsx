@@ -50,7 +50,7 @@ export default function Carousel({ images }: CarouselProps) {
               key={i}
               onClick={() => setCurrentIndex(i)}
               className={`w-2.5 h-2.5 rounded-full transition-colors ${
-                i === currentIndex ? "bg-[#ff8a00]" : "bg-white/30 hover:bg-white/50"
+                i === currentIndex ? "bg-[#ffbd3f]" : "bg-white/30 hover:bg-white/50"
               }`}
               aria-label={`Go to slide ${i + 1}`}
             />

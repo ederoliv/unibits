@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { games } from "../data/games";
 
@@ -11,7 +11,6 @@ const navLinks = [
 ];
 
 export default function Navbar() {
-  const location = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
   const [isHidden, setIsHidden] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -37,14 +36,9 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
 
-  // Fechar o menu móvel quando mudar de tela
-  useEffect(() => {
-    setMenuOpen(false);
-  }, [location.pathname]);
-
   return (
     <header 
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${isHidden ? '-translate-y-full' : 'translate-y-0'} bg-[#0b0b0b]/50 border-b-[0.5px] border-[#666]`}
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${isHidden ? '-translate-y-full' : 'translate-y-0'} bg-[#191919]/90 backdrop-blur-md`}
     >
       <div className="max-w-[1440px] mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
@@ -63,20 +57,20 @@ export default function Navbar() {
                   onMouseEnter={() => setDesktopDropdownOpen(true)}
                   onMouseLeave={() => setDesktopDropdownOpen(false)}
                 >
-                  <a href={l.href} className="text-white hover:text-white transition-colors text-sm font-medium flex items-center gap-1 cursor-pointer bg-transparent border-none no-underline">
+                  <a href={l.href} className="text-white/70 hover:text-[#ffbd3f] transition-colors text-sm font-medium flex items-center gap-1 cursor-pointer bg-transparent border-none no-underline">
                     {l.label}
                     <ChevronDown size={14} className={`transition-transform duration-200 ${desktopDropdownOpen ? 'rotate-180' : ''}`} />
                   </a>
                   
                   {desktopDropdownOpen && (
                     <div className="absolute top-full left-0 pt-2 w-[220px] z-50">
-                      <div className="bg-[#111] border border-[#222] rounded-lg shadow-xl overflow-hidden py-2 flex flex-col">
+                      <div className="bg-[#111] rounded-lg shadow-xl overflow-hidden py-2 flex flex-col">
                         {games.map(game => (
                           <Link 
                             key={game.id} 
                             to={`/jogo/${game.id}`}
                             onClick={() => setDesktopDropdownOpen(false)}
-                            className="text-white/80 hover:text-white hover:bg-white/10 px-4 py-3 text-sm transition-colors no-underline text-left"
+                            className="text-white/70 hover:text-[#ffbd3f] hover:bg-white/5 px-4 py-3 text-sm transition-colors no-underline text-left"
                           >
                             {game.title}
                           </Link>
@@ -92,7 +86,7 @@ export default function Navbar() {
                 <Link
                   key={l.label}
                   to={l.path}
-                  className="text-white hover:text-white transition-colors no-underline text-sm font-medium"
+                  className="text-white/70 hover:text-[#ffbd3f] transition-colors no-underline text-sm font-medium"
                 >
                   {l.label}
                 </Link>
@@ -102,7 +96,7 @@ export default function Navbar() {
               <a
                 key={l.label}
                 href={l.href}
-                className="text-white hover:text-white transition-colors no-underline text-sm font-medium"
+                className="text-white/70 hover:text-[#ffbd3f] transition-colors no-underline text-sm font-medium"
               >
                 {l.label}
               </a>
@@ -113,15 +107,16 @@ export default function Navbar() {
         {/* CTA + Toggle */}
         <div className="flex items-center gap-4">
           <a
-            href="#contatos"
-            className="bg-white text-black px-5 py-2 rounded-full font-bold text-[13px] tracking-wide no-underline hover:bg-white/90 transition-colors shadow-sm"
+            href="/#contatos"
+            className="bg-[#ffbd3f] text-[#171717] px-5 py-2 rounded-full font-bold text-[13px] tracking-wide no-underline hover:bg-white transition-colors"
           >
-            CONTATE-NOS
+            Fale com a gente
           </a>
           <button
             onClick={() => setMenuOpen(!menuOpen)}
             className="md:hidden flex bg-transparent border-none text-white cursor-pointer p-1"
-            aria-label="Toggle menu"
+            aria-label={menuOpen ? "Fechar menu" : "Abrir menu"}
+            aria-expanded={menuOpen}
           >
             {menuOpen ? <X size={22} /> : <Menu size={22} />}
           </button>
@@ -130,16 +125,16 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="md:hidden bg-[#111] border-t border-[#222] px-6 py-4 pb-6 flex flex-col">
+        <div className="md:hidden bg-[#191919] px-6 py-4 pb-6 flex flex-col">
           {navLinks.map((l) => {
             if (l.isDropdown) {
               return (
-                <div key={l.label} className="border-b border-[#222]">
+                <div key={l.label}>
                   <div className="w-full text-white/80 py-3 text-[15px] flex justify-between items-center bg-transparent border-none">
-                    <a href={l.href} onClick={() => setMenuOpen(false)} className="text-white/80 hover:text-white no-underline text-left flex-1 font-medium">
+                    <a href={l.href} onClick={() => setMenuOpen(false)} className="text-white/70 hover:text-[#ffbd3f] no-underline text-left flex-1 font-medium">
                       {l.label}
                     </a>
-                    <button onClick={() => setMobileDropdownOpen(!mobileDropdownOpen)} className="bg-[#222] hover:bg-[#333] transition-colors rounded-md p-1.5 cursor-pointer text-white flex-shrink-0 border-none">
+                    <button onClick={() => setMobileDropdownOpen(!mobileDropdownOpen)} aria-label={mobileDropdownOpen ? "Recolher lista de jogos" : "Expandir lista de jogos"} aria-expanded={mobileDropdownOpen} className="bg-white/5 hover:bg-white/10 transition-colors rounded-md p-1.5 cursor-pointer text-white flex-shrink-0 border-none">
                       <ChevronDown size={18} className={`transition-transform duration-200 ${mobileDropdownOpen ? 'rotate-180' : ''}`} />
                     </button>
                   </div>
@@ -150,7 +145,7 @@ export default function Navbar() {
                           key={game.id} 
                           to={`/jogo/${game.id}`}
                           onClick={() => setMenuOpen(false)}
-                          className="text-white/60 hover:text-white py-2.5 text-[14px] no-underline transition-colors"
+                          className="text-white/55 hover:text-[#ffbd3f] py-2.5 text-[14px] no-underline transition-colors"
                         >
                           {game.title}
                         </Link>
@@ -166,7 +161,7 @@ export default function Navbar() {
                   key={l.label}
                   to={l.path}
                   onClick={() => setMenuOpen(false)}
-                  className="block text-white/80 hover:text-white py-3 text-[15px] border-b border-[#222] no-underline transition-colors"
+                  className="block text-white/70 hover:text-[#ffbd3f] py-3 text-[15px] no-underline transition-colors"
                 >
                   {l.label}
                 </Link>
@@ -176,7 +171,7 @@ export default function Navbar() {
               <a
                 key={l.label}
                 href={l.href}
-                className="block text-white/80 hover:text-white py-3 text-[15px] border-b border-[#222] no-underline transition-colors"
+                className="block text-white/70 hover:text-[#ffbd3f] py-3 text-[15px] no-underline transition-colors"
               >
                 {l.label}
               </a>
