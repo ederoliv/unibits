@@ -71,7 +71,7 @@ export default function GamePage() {
           <div className="grid gap-x-12 gap-y-10 md:grid-cols-2">
             {game.features.map((feature, index) => (
               <article key={`${feature.title}-${index}`} className="rounded-3xl bg-[#191919] p-7 md:p-8">
-                <h4 className="text-xl font-bold text-white">{feature.title}</h4>
+                <h4 className="text-xl font-bold text-[#ffbd3f]">{feature.title}</h4>
                 <p className="mt-3 text-sm leading-relaxed text-white/55 md:text-base">
                   {feature.description}
                 </p>
