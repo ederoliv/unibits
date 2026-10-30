@@ -26,7 +26,7 @@ export default function Home() {
     <>
       <HeroCarousel />
 
-      <section id="sobre" className="scroll-mt-20 bg-[#0B0811] px-6 py-24 md:py-32">
+      <section id="sobre" className="scroll-mt-20 bg-[#08060C] px-6 py-24 md:py-32">
         <div className="mx-auto grid max-w-[1200px] gap-12 md:grid-cols-[1fr_1.1fr] md:items-end md:gap-20">
           <div>
             <p className="mb-5 text-xs font-bold uppercase tracking-[0.3em] text-[#815EFF]">
@@ -57,7 +57,7 @@ export default function Home() {
 
         <div className="mx-auto mt-20 grid max-w-[1200px] gap-3 md:grid-cols-3">
           {studioPillars.map((pillar) => (
-            <article key={pillar.number} className="rounded-3xl bg-[#100C17] p-7 md:p-9">
+            <article key={pillar.number} className="rounded-3xl bg-[#0C0911] p-7 md:p-9">
               <span className="text-sm font-bold tracking-widest text-[#815EFF]">{pillar.number}</span>
               <h3 className="mt-8 text-xl font-bold text-white">{pillar.title}</h3>
               <p className="mt-3 text-sm leading-relaxed text-white/55">{pillar.description}</p>
@@ -66,7 +66,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="nossos-jogos" className="scroll-mt-20 bg-[#0A0710] px-6 py-24 md:py-32">
+      <section id="nossos-jogos" className="scroll-mt-20 bg-[#07050A] px-6 py-24 md:py-32">
         <div className="mx-auto max-w-[1200px]">
           <div className="mb-12 flex flex-col gap-5 md:mb-16 md:flex-row md:items-end md:justify-between">
             <div>
@@ -87,9 +87,9 @@ export default function Home() {
               <Link
                 key={game.id}
                 to={`/jogo/${game.id}`}
-                className="group overflow-hidden rounded-3xl bg-[#100C17] no-underline transition-all duration-300 hover:-translate-y-1 hover:bg-[#171223]"
+                className="group overflow-hidden rounded-3xl bg-[#0C0911] no-underline transition-all duration-300 hover:-translate-y-1 hover:bg-[#100C17]"
               >
-                <div className="relative aspect-[16/9] overflow-hidden bg-[#171223]">
+                <div className="relative aspect-[16/9] overflow-hidden bg-[#100C17]">
                   <img
                     src={game.banners[0]}
                     alt={`Imagem de ${game.title}`}
@@ -130,8 +130,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="contatos" className="scroll-mt-20 bg-[#0B0811] px-6 py-24 md:py-32">
-        <div className="mx-auto max-w-[1000px] rounded-[2rem] bg-[#100C17] px-6 py-12 text-center md:px-16 md:py-20">
+      <section id="contatos" className="scroll-mt-20 bg-[#08060C] px-6 py-24 md:py-32">
+        <div className="mx-auto max-w-[1000px] rounded-[2rem] bg-[#0C0911] px-6 py-12 text-center md:px-16 md:py-20">
           <p className="mb-4 text-xs font-bold uppercase tracking-[0.3em] text-[#815EFF]">
             Vamos conversar
           </p>

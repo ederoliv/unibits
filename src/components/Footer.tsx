@@ -3,7 +3,7 @@ import { games } from "../data/games";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0A0710] px-6 pb-8 pt-16 md:pt-20">
+    <footer className="bg-[#08060C] px-6 pb-8 pt-16 md:pt-20">
       <div className="mx-auto max-w-[1200px]">
         <div className="grid gap-12 md:grid-cols-[1.2fr_0.8fr_0.8fr]">
           <div>

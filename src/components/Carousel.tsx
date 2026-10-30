@@ -37,7 +37,7 @@ export default function Carousel({ images }: CarouselProps) {
               }}
             />
             {/* Dark overlay specifically for carousel to ensure text readability */}
-            <div className="absolute inset-0 bg-[#07060B]/40" />
+            <div className="absolute inset-0 bg-[#050408]/40" />
           </div>
         ))}
       </div>

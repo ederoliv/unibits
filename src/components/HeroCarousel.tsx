@@ -17,7 +17,7 @@ export default function HeroCarousel() {
   const game = games[currentIndex];
 
   return (
-    <section className="relative isolate overflow-hidden bg-[#0B0811] px-6 pb-16 pt-32 md:pb-20 md:pt-36">
+    <section className="relative isolate overflow-hidden bg-[#08060C] px-6 pb-16 pt-32 md:pb-20 md:pt-36">
       <div className="pointer-events-none absolute -right-32 -top-40 h-[34rem] w-[34rem] rounded-full bg-[#815EFF]/15 blur-[120px]" />
       <div className="mx-auto grid min-h-[480px] max-w-[1200px] items-center gap-12 md:grid-cols-[0.9fr_1.1fr]">
         <div key={game.id} className="relative z-10 hero-copy">
@@ -59,7 +59,7 @@ export default function HeroCarousel() {
         </div>
 
         <div key={`${game.id}-art`} className="relative">
-          <div className="relative aspect-[16/11] overflow-hidden rounded-[1.5rem] bg-[#171223] shadow-2xl">
+          <div className="relative aspect-[16/11] overflow-hidden rounded-[1.5rem] bg-[#100C17] shadow-2xl">
             <img
               src={game.banners[0]}
               alt={`Imagem de ${game.title}`}

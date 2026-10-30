@@ -38,7 +38,7 @@ export default function Navbar() {
 
   return (
     <header 
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${isHidden ? '-translate-y-full' : 'translate-y-0'} bg-[#0D0914]/90 backdrop-blur-md`}
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${isHidden ? '-translate-y-full' : 'translate-y-0'} bg-[#0A080F]/90 backdrop-blur-md`}
     >
       <div className="max-w-[1440px] mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
@@ -125,7 +125,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="md:hidden bg-[#0D0914] px-6 py-4 pb-6 flex flex-col">
+        <div className="md:hidden bg-[#0A080F] px-6 py-4 pb-6 flex flex-col">
           {navLinks.map((l) => {
             if (l.isDropdown) {
               return (

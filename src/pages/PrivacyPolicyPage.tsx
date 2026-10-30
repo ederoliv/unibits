@@ -7,7 +7,7 @@ export default function PrivacyPolicyPage() {
   }, []);
 
   return (
-    <div className="min-h-[70vh] w-full bg-[#0B0811] px-6 pb-20 pt-32 md:pt-40">
+    <div className="min-h-[70vh] w-full bg-[#08060C] px-6 pb-20 pt-32 md:pt-40">
       <header className="mx-auto mb-14 max-w-[900px]">
         <p className="mb-4 text-xs font-bold uppercase tracking-[0.3em] text-[#815EFF]">Unibits Studios</p>
         <h1 className="text-[clamp(2.5rem,6vw,5rem)] font-black leading-none tracking-[-0.06em] text-white">
@@ -19,7 +19,7 @@ export default function PrivacyPolicyPage() {
       </header>
       
       <div className="mx-auto max-w-[900px] space-y-12 text-[16px] leading-relaxed text-white/65 md:text-[17px]">
-        <section className="rounded-3xl bg-[#100C17] p-6 md:p-9">
+        <section className="rounded-3xl bg-[#0C0911] p-6 md:p-9">
           <p className="mb-4">
             Esta Política de Privacidade descreve como a <strong className="text-white">Unibits</strong> trata as informações relacionadas aos seus jogos:
           </p>
