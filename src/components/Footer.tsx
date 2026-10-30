@@ -23,25 +23,25 @@ export default function Footer() {
             </p>
           </div>
           <div>
-            <h2 className="text-xs font-bold uppercase tracking-[0.25em] text-[#815EFF]">Explore</h2>
+            <h2 className="text-xs font-bold uppercase tracking-[0.25em] text-white/50">Explore</h2>
             <div className="mt-5 flex flex-col items-start gap-3">
-              <Link to="/#sobre" className="text-sm text-white/60 no-underline transition-colors hover:text-[#815EFF]">Sobre a Unibits</Link>
-              <Link to="/#nossos-jogos" className="text-sm text-white/60 no-underline transition-colors hover:text-[#815EFF]">Nossos jogos</Link>
-              <Link to="/#contatos" className="text-sm text-white/60 no-underline transition-colors hover:text-[#815EFF]">Contato</Link>
-              <Link to="/privacidade" className="text-sm text-white/60 no-underline transition-colors hover:text-[#815EFF]">Política de Privacidade</Link>
+              <Link to="/#sobre" className="text-sm text-white/60 no-underline transition-colors hover:text-white">Sobre a Unibits</Link>
+              <Link to="/#nossos-jogos" className="text-sm text-white/60 no-underline transition-colors hover:text-white">Nossos jogos</Link>
+              <Link to="/#contatos" className="text-sm text-white/60 no-underline transition-colors hover:text-white">Contato</Link>
+              <Link to="/privacidade" className="text-sm text-white/60 no-underline transition-colors hover:text-white">Política de Privacidade</Link>
             </div>
           </div>
           <div>
-            <h2 className="text-xs font-bold uppercase tracking-[0.25em] text-[#815EFF]">Jogos</h2>
+            <h2 className="text-xs font-bold uppercase tracking-[0.25em] text-white/50">Jogos</h2>
             <div className="mt-5 flex flex-col items-start gap-3">
               {games.map((game) => (
                 <Link
                   key={game.id}
                   to={`/jogo/${game.id}`}
-                  className="text-sm text-white/60 no-underline transition-colors hover:text-[#815EFF]"
+                  className="text-sm text-white/60 no-underline transition-colors hover:text-white"
                 >
                   {game.title}
-                  {game.isComingSoon && <span className="ml-2 text-xs text-[#815EFF]">Em breve</span>}
+                  {game.isComingSoon && <span className="ml-2 text-xs text-white/50">Em breve</span>}
                 </Link>
               ))}
             </div>
@@ -51,7 +51,7 @@ export default function Footer() {
           <p className="m-0">© Unibits™ 2026. Todos os direitos reservados.</p>
           <p className="m-0">
             Desenvolvido por{" "}
-            <a href="https://mekimi.com.br" target="_blank" rel="noopener noreferrer" className="font-bold text-white/55 no-underline transition-colors hover:text-[#815EFF]">
+            <a href="https://mekimi.com.br" target="_blank" rel="noopener noreferrer" className="font-bold text-white/55 no-underline transition-colors hover:text-white">
               Mekimi
             </a>
           </p>

@@ -29,12 +29,12 @@ export default function Home() {
       <section id="sobre" className="scroll-mt-20 bg-[#08060C] px-6 py-24 md:py-32">
         <div className="mx-auto grid max-w-[1200px] gap-12 md:grid-cols-[1fr_1.1fr] md:items-end md:gap-20">
           <div>
-            <p className="mb-5 text-xs font-bold uppercase tracking-[0.3em] text-[#815EFF]">
+            <p className="mb-5 text-xs font-bold uppercase tracking-[0.3em] text-white/55">
               Quem somos
             </p>
             <h2 className="max-w-[600px] text-[clamp(2.6rem,6vw,5.5rem)] font-light italic leading-[0.98] tracking-[-0.06em] text-white">
               Isso define a{" "}
-              <span className="font-black not-italic text-[#815EFF]">Unibits.</span>
+              <span className="font-black not-italic text-white">Unibits.</span>
             </h2>
           </div>
           <div className="max-w-[620px]">
@@ -48,7 +48,7 @@ export default function Home() {
             </p>
             <a
               href="#nossos-jogos"
-              className="mt-8 inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-[#815EFF] no-underline transition-colors hover:text-white"
+              className="mt-8 inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-white/75 no-underline transition-colors hover:text-white"
             >
               Conheça nossos jogos <ArrowDown size={16} />
             </a>
@@ -58,7 +58,7 @@ export default function Home() {
         <div className="mx-auto mt-20 grid max-w-[1200px] gap-3 md:grid-cols-3">
           {studioPillars.map((pillar) => (
             <article key={pillar.number} className="rounded-3xl bg-[#0C0911] p-7 md:p-9">
-              <span className="text-sm font-bold tracking-widest text-[#815EFF]">{pillar.number}</span>
+              <span className="text-sm font-bold tracking-widest text-white/50">{pillar.number}</span>
               <h3 className="mt-8 text-xl font-bold text-white">{pillar.title}</h3>
               <p className="mt-3 text-sm leading-relaxed text-white/55">{pillar.description}</p>
             </article>
@@ -70,11 +70,11 @@ export default function Home() {
         <div className="mx-auto max-w-[1200px]">
           <div className="mb-12 flex flex-col gap-5 md:mb-16 md:flex-row md:items-end md:justify-between">
             <div>
-              <p className="mb-4 text-xs font-bold uppercase tracking-[0.3em] text-[#815EFF]">
+              <p className="mb-4 text-xs font-bold uppercase tracking-[0.3em] text-white/50">
                 Nosso portfólio
               </p>
               <h2 className="text-[clamp(2.5rem,5vw,4.5rem)] font-black leading-none tracking-[-0.05em] text-white">
-                Nossos jogos<span className="text-[#815EFF]">.</span>
+                Nossos jogos<span className="text-white">.</span>
               </h2>
             </div>
             <p className="max-w-md text-sm leading-relaxed text-white/55 md:text-right">
@@ -87,9 +87,13 @@ export default function Home() {
               <Link
                 key={game.id}
                 to={`/jogo/${game.id}`}
-                className="group overflow-hidden rounded-3xl bg-[#0C0911] no-underline transition-all duration-300 hover:-translate-y-1 hover:bg-[#100C17]"
+                className="group overflow-hidden rounded-3xl no-underline transition-all duration-300 hover:-translate-y-1"
+                style={{ backgroundColor: `color-mix(in srgb, ${game.accentColor} 6%, #0C0911)` }}
               >
-                <div className="relative aspect-[16/9] overflow-hidden bg-[#100C17]">
+                <div
+                  className="relative aspect-[16/9] overflow-hidden"
+                  style={{ backgroundColor: `color-mix(in srgb, ${game.accentColor} 10%, #100C17)` }}
+                >
                   <img
                     src={game.banners[0]}
                     alt={`Imagem de ${game.title}`}
@@ -100,7 +104,10 @@ export default function Home() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
                   {game.isComingSoon && (
-                    <span className="absolute left-5 top-5 rounded-full bg-[#815EFF] px-4 py-2 text-[10px] font-black uppercase tracking-widest text-[#09070F]">
+                    <span
+                      className="absolute left-5 top-5 rounded-full px-4 py-2 text-[10px] font-black uppercase tracking-widest text-[#09070F]"
+                      style={{ backgroundColor: game.accentColor }}
+                    >
                       Em breve
                     </span>
                   )}
@@ -111,16 +118,21 @@ export default function Home() {
                       className="h-14 w-14 rounded-2xl object-cover shadow-xl md:h-16 md:w-16"
                     />
                     <div>
-                      <p className="text-sm font-bold uppercase tracking-wider text-[#815EFF]">
+                      <p className="text-sm font-bold uppercase tracking-wider" style={{ color: game.accentColor }}>
                         {game.isComingSoon ? "Novo projeto" : "Jogo mobile"}
                       </p>
-                      <h3 className="mt-1 text-xl font-black text-white md:text-2xl">{game.title}</h3>
+                      <h3 className="mt-1 text-xl font-black text-white md:text-2xl">
+                        {game.title}<span style={{ color: game.accentColor }}>.</span>
+                      </h3>
                     </div>
                   </div>
                 </div>
                 <div className="flex items-center justify-between gap-5 p-5 md:p-7">
                   <p className="m-0 text-sm leading-relaxed text-white/60">{game.heroDescription}</p>
-                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white/5 text-[#815EFF] transition-colors group-hover:bg-[#815EFF] group-hover:text-[#09070F]">
+                  <span
+                    className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white/5 transition-colors group-hover:bg-white/10"
+                    style={{ color: game.accentColor }}
+                  >
                     <ArrowUpRight size={20} />
                   </span>
                 </div>
@@ -132,7 +144,7 @@ export default function Home() {
 
       <section id="contatos" className="scroll-mt-20 bg-[#08060C] px-6 py-24 md:py-32">
         <div className="mx-auto max-w-[1000px] rounded-[2rem] bg-[#0C0911] px-6 py-12 text-center md:px-16 md:py-20">
-          <p className="mb-4 text-xs font-bold uppercase tracking-[0.3em] text-[#815EFF]">
+          <p className="mb-4 text-xs font-bold uppercase tracking-[0.3em] text-white/50">
             Vamos conversar
           </p>
           <h2 className="mx-auto max-w-3xl text-[clamp(2.2rem,5vw,4rem)] font-black leading-[1.05] tracking-[-0.05em] text-white">
@@ -147,7 +159,7 @@ export default function Home() {
               href="https://www.youtube.com/@Unibits"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full bg-white/5 px-5 py-3 text-sm font-bold text-white no-underline transition-colors hover:bg-[#815EFF]/10 hover:text-[#815EFF]"
+              className="inline-flex items-center gap-2 rounded-full bg-white/5 px-5 py-3 text-sm font-bold text-white no-underline transition-colors hover:bg-white/10"
             >
               <MonitorPlay size={18} /> YouTube
             </a>
@@ -155,7 +167,7 @@ export default function Home() {
               href="https://www.instagram.com/unibitsstudios"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full bg-white/5 px-5 py-3 text-sm font-bold text-white no-underline transition-colors hover:bg-[#815EFF]/10 hover:text-[#815EFF]"
+              className="inline-flex items-center gap-2 rounded-full bg-white/5 px-5 py-3 text-sm font-bold text-white no-underline transition-colors hover:bg-white/10"
             >
               <Camera size={18} /> Instagram
             </a>
@@ -163,7 +175,7 @@ export default function Home() {
               href="https://discord.com/invite/agyd4n5PUE"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full bg-white/5 px-5 py-3 text-sm font-bold text-white no-underline transition-colors hover:bg-[#815EFF]/10 hover:text-[#815EFF]"
+              className="inline-flex items-center gap-2 rounded-full bg-white/5 px-5 py-3 text-sm font-bold text-white no-underline transition-colors hover:bg-white/10"
             >
               <MessageCircle size={18} /> Discord
             </a>

@@ -16,6 +16,7 @@ export interface GameInfo {
   playStoreUrl: string;
   iconSrc: string;
   banners: string[];
+  accentColor: string;
 }
 
 export const games: GameInfo[] = [
@@ -47,6 +48,7 @@ export const games: GameInfo[] = [
     conclusion: "Prepare sua nave e mostre quem manda na quebrada!",
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.Unibits.PocketGrau",
     iconSrc: "https://play-lh.googleusercontent.com/CXUHd_p6K57h6m8CEOVYT3Fdkb5kDzlNmDNGrBpwwrJ3eZAe-RMHbFSo_pJW8O8xNAdAyzPJa6IOzGdpFb1Qh8I=w240-h480-rw",
+    accentColor: "#F5C842",
     banners: [
       "https://play-lh.googleusercontent.com/jo_unrrEPqweT6nohrf0t3DbF98hRT9D6B_5NPBWsG9Rnnf9MUgeBLacUA1HUwry70IAmhpNeEi7BN_2HYdt=w2560-h1440-rw",
       "https://play-lh.googleusercontent.com/0fJk4L30wrrntqsDzUK33C_aaRXtBqGlHP7Db2Idupkn3aq4m3xgFaQCeOj0Z8B3ZV17xlBlmekJv8j42NHkBYI=w2560-h1440-rw",
@@ -82,6 +84,7 @@ export const games: GameInfo[] = [
     conclusion: "Trabalhe, conquiste e empine com estilo.",
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.Unibits.MotoGrauBrasil",
     iconSrc: "https://play-lh.googleusercontent.com/Eti6zDxukrYbompKRg_rCJyItB-T4jQIzg8EbRMC5yKBPnvxz3hkvBkeT18m7jh0UQ=w240-h480-rw",
+    accentColor: "#EF3340",
     banners: [
       "https://play-lh.googleusercontent.com/MxjHBH1m-I603Nug9btVSB3f8W9-71yFCThOcdFIkXhMUAaIu0JTByrEQqIQv3nvtfUX=w2560-h1440-rw",
       "https://play-lh.googleusercontent.com/_gUw08FzAjSoBVfEA91RLx_BMJ4zbsZZBM7bXnCCxtakmuL1YZNa9uw9Z2AbPZcwQws=w2560-h1440-rw",
@@ -118,6 +121,7 @@ export const games: GameInfo[] = [
     conclusion: "O \"grau\" acabou. É hora de colocar a ordem de volta nas ruas.",
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.Unibits.Patrulha244",
     iconSrc: "https://play-lh.googleusercontent.com/ip63AnDGCj8HxsiAiEfKoRDyq9arqcEYKDIOVXd25TeIP7NasrCTN5Pea8_J4YE8KnXmeMkpXi7b8cb8nonBIw=w240-h480-rw",
+    accentColor: "#3284F5",
     banners: [
       "https://play-lh.googleusercontent.com/gxI08VONWgfYCOqv7UcAChRBwtw3KTK_OE_fsgd7pvvjmWDjWlGLrAqJdwucCo-a2e0bbYAxUQflrQ88bjS2TwA=w2560-h1440-rw",
       "https://play-lh.googleusercontent.com/FFMpFxLmKCI-2JRV2xXZNhEiLzevHwGqVmDhVN1czoNQKVi1NlVCFYIEfCw-F_vAzwK_hfIokvBuN8K2vXtsvw=w2560-h1440-rw",
@@ -164,6 +168,7 @@ export const games: GameInfo[] = [
     conclusion: "Personalize seu carro, explore o mapa e curta o melhor do estilo automotivo brasileiro.",
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.Unibits.EliteCarrosBR",
     iconSrc: "https://play-lh.googleusercontent.com/I5EGy_n-Ly2OT2go8mCVjVuZUSOEGRJCXE7T6hAHl4a-uoFulUfcCzn9blDZr9eEVSNJjb0hg4hwj92DPaE8QQ=s512",
+    accentColor: "#FFC928",
     banners: [
       "https://play-lh.googleusercontent.com/EM1J_A6q-M3x3A2dA78-SE-2C_-SMzEYeH3BZ-eTjBuSNYZqm771S8SKZlFgx3XhuemG033xnnmUapQ3WvRpsw=w1052-h592",
       "https://play-lh.googleusercontent.com/Rg3FcJGdtThelB3WP8GJicWWXYl7R4DBZcNRuwm6394M3wm-yAUk7nNHXvGmJ836bWltmNoV65TPslYHoE_XckM=w1052-h592",

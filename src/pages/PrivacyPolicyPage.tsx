@@ -9,9 +9,9 @@ export default function PrivacyPolicyPage() {
   return (
     <div className="min-h-[70vh] w-full bg-[#08060C] px-6 pb-20 pt-32 md:pt-40">
       <header className="mx-auto mb-14 max-w-[900px]">
-        <p className="mb-4 text-xs font-bold uppercase tracking-[0.3em] text-[#815EFF]">Unibits Studios</p>
+        <p className="mb-4 text-xs font-bold uppercase tracking-[0.3em] text-white/50">Unibits Studios</p>
         <h1 className="text-[clamp(2.5rem,6vw,5rem)] font-black leading-none tracking-[-0.06em] text-white">
-          Política de <span className="text-[#815EFF]">Privacidade.</span>
+          Política de <span className="text-white">Privacidade.</span>
         </h1>
         <p className="mt-6 max-w-2xl text-base leading-relaxed text-white/55">
           Saiba quais informações são tratadas quando você utiliza os jogos da Unibits e como elas são protegidas.
@@ -23,7 +23,7 @@ export default function PrivacyPolicyPage() {
           <p className="mb-4">
             Esta Política de Privacidade descreve como a <strong className="text-white">Unibits</strong> trata as informações relacionadas aos seus jogos:
           </p>
-          <ul className="list-disc pl-6 space-y-2 mb-4 marker:text-[#815EFF]">
+          <ul className="list-disc pl-6 space-y-2 mb-4 marker:text-white/50">
             <li><strong className="text-white">Pocket Grau</strong></li>
             <li><strong className="text-white">Moto Grau Brasil</strong></li>
             <li><strong className="text-white">Patrulha 244</strong></li>
@@ -101,7 +101,7 @@ export default function PrivacyPolicyPage() {
         <section>
           <h2 className="mb-6 text-2xl font-black tracking-tight text-white md:text-3xl">02. Uso das Informações</h2>
           <p className="mb-3">As informações armazenadas localmente são utilizadas exclusivamente para:</p>
-          <ul className="list-disc pl-6 space-y-2 marker:text-[#815EFF]">
+          <ul className="list-disc pl-6 space-y-2 marker:text-white/50">
             <li>Funcionamento correto dos Jogos</li>
             <li>Salvamento de progresso e preferências</li>
             <li>Liberação de recompensas dentro do jogo</li>
@@ -113,7 +113,7 @@ export default function PrivacyPolicyPage() {
           <h2 className="mb-6 text-2xl font-black tracking-tight text-white md:text-3xl">03. Conexão com a Internet</h2>
           <p className="mb-3">Os Jogos podem funcionar <strong className="text-white">offline</strong>.</p>
           <p className="mb-3">A conexão com a internet é necessária apenas para:</p>
-          <ul className="list-disc pl-6 space-y-2 marker:text-[#815EFF]">
+          <ul className="list-disc pl-6 space-y-2 marker:text-white/50">
             <li>Exibição de anúncios</li>
             <li>Recebimento de recompensas vinculadas a anúncios</li>
             <li>Funcionalidade de modo online (Modo multi-jogador utilizando Mirror Network)</li>
@@ -123,7 +123,7 @@ export default function PrivacyPolicyPage() {
         <section>
           <h2 className="mb-6 text-2xl font-black tracking-tight text-white md:text-3xl">04. Segurança das Informações</h2>
           <p className="mb-3">As informações são armazenadas localmente e protegidas pelo próprio sistema operacional do dispositivo. A Unibits:</p>
-          <ul className="list-disc pl-6 space-y-2 marker:text-[#815EFF]">
+          <ul className="list-disc pl-6 space-y-2 marker:text-white/50">
             <li>Não coleta</li>
             <li>Não armazena remotamente</li>
             <li>Não acessa esses dados</li>
@@ -133,7 +133,7 @@ export default function PrivacyPolicyPage() {
         <section>
           <h2 className="mb-6 text-2xl font-black tracking-tight text-white md:text-3xl">05. Seus Direitos</h2>
           <p className="mb-3">Como não coletamos dados pessoais:</p>
-          <ul className="list-disc pl-6 space-y-2 marker:text-[#815EFF]">
+          <ul className="list-disc pl-6 space-y-2 marker:text-white/50">
             <li>Não há informações para acesso, correção ou exclusão</li>
             <li>O controle dos dados permanece no dispositivo do usuário</li>
           </ul>
@@ -155,14 +155,14 @@ export default function PrivacyPolicyPage() {
               <p className="flex items-center gap-3">
                 <span className="text-xl">🌐</span>
                 <span className="text-white/60">Site:</span>
-                <a href="https://unibits.com.br" className="text-[#815EFF] hover:text-white transition-colors no-underline">
+                <a href="https://unibits.com.br" className="text-white/75 hover:text-white transition-colors no-underline">
                   https://unibits.com.br
                 </a>
               </p>
               <p className="flex items-center gap-3">
                 <span className="text-xl">📧</span>
                 <span className="text-white/60">E-mail:</span>
-                <a href="mailto:contato@unibits.com.br" className="text-white hover:text-[#815EFF] transition-colors no-underline">
+                <a href="mailto:contato@unibits.com.br" className="text-white hover:text-white/75 transition-colors no-underline">
                   contato@unibits.com.br
                 </a>
               </p>

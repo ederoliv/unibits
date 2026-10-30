@@ -2,9 +2,10 @@ import { useState, useEffect } from "react";
 
 interface CarouselProps {
   images: string[];
+  accentColor: string;
 }
 
-export default function Carousel({ images }: CarouselProps) {
+export default function Carousel({ images, accentColor }: CarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   // Auto slide
@@ -50,8 +51,9 @@ export default function Carousel({ images }: CarouselProps) {
               key={i}
               onClick={() => setCurrentIndex(i)}
               className={`w-2.5 h-2.5 rounded-full transition-colors ${
-                i === currentIndex ? "bg-[#815EFF]" : "bg-white/30 hover:bg-white/50"
+                i === currentIndex ? "" : "bg-white/30 hover:bg-white/50"
               }`}
+              style={i === currentIndex ? { backgroundColor: accentColor } : undefined}
               aria-label={`Go to slide ${i + 1}`}
             />
           ))}

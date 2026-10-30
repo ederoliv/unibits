@@ -17,16 +17,22 @@ export default function HeroCarousel() {
   const game = games[currentIndex];
 
   return (
-    <section className="relative isolate overflow-hidden bg-[#08060C] px-6 pb-16 pt-32 md:pb-20 md:pt-36">
-      <div className="pointer-events-none absolute -right-32 -top-40 h-[34rem] w-[34rem] rounded-full bg-[#815EFF]/15 blur-[120px]" />
+    <section
+      className="relative isolate overflow-hidden px-6 pb-16 pt-32 md:pb-20 md:pt-36"
+      style={{ backgroundColor: `color-mix(in srgb, ${game.accentColor} 6%, #08060C)` }}
+    >
+      <div
+        className="pointer-events-none absolute -right-32 -top-40 h-[34rem] w-[34rem] rounded-full blur-[120px]"
+        style={{ backgroundColor: `${game.accentColor}20` }}
+      />
       <div className="mx-auto grid min-h-[480px] max-w-[1200px] items-center gap-12 md:grid-cols-[0.9fr_1.1fr]">
         <div key={game.id} className="relative z-10 hero-copy">
-          <p className="mb-5 flex items-center gap-3 text-xs font-bold uppercase tracking-[0.25em] text-[#815EFF]">
-            <span className="h-px w-8 bg-[#815EFF]" />
+          <p className="mb-5 flex items-center gap-3 text-xs font-bold uppercase tracking-[0.25em]" style={{ color: game.accentColor }}>
+            <span className="h-px w-8" style={{ backgroundColor: game.accentColor }} />
             Unibits Studios
           </p>
           <h1 className="max-w-[620px] text-[clamp(3rem,7vw,6.8rem)] font-black leading-[0.9] tracking-[-0.07em] text-white">
-            {game.title}<span className="text-[#815EFF]">.</span>
+            {game.title}<span style={{ color: game.accentColor }}>.</span>
           </h1>
           <p className="mt-6 max-w-xl text-lg font-semibold leading-snug text-white/85 md:text-2xl">
             {game.subtitle}
@@ -37,7 +43,8 @@ export default function HeroCarousel() {
           <div className="mt-8 flex flex-wrap items-center gap-3">
             <Link
               to={`/jogo/${game.id}`}
-              className="inline-flex items-center gap-2 rounded-full bg-[#815EFF] px-6 py-3.5 text-sm font-black uppercase tracking-wide text-[#09070F] no-underline transition-transform hover:-translate-y-0.5"
+              className="inline-flex items-center gap-2 rounded-full px-6 py-3.5 text-sm font-black uppercase tracking-wide text-[#09070F] no-underline transition-transform hover:-translate-y-0.5"
+              style={{ backgroundColor: game.accentColor }}
             >
               Conheça <ArrowUpRight size={17} />
             </Link>
@@ -50,7 +57,7 @@ export default function HeroCarousel() {
                 href={game.playStoreUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-full bg-white/5 px-6 py-3.5 text-sm font-bold uppercase tracking-wide text-white no-underline transition-colors hover:bg-white/10 hover:text-[#815EFF]"
+                className="rounded-full bg-white/5 px-6 py-3.5 text-sm font-bold uppercase tracking-wide text-white no-underline transition-colors hover:bg-white/10"
               >
                 Play Store
               </a>
@@ -89,8 +96,9 @@ export default function HeroCarousel() {
               key={item.id}
               onClick={() => setCurrentIndex(index)}
               className={`h-2 rounded-full transition-all ${
-                index === currentIndex ? "w-8 bg-[#815EFF]" : "w-2 bg-white/30 hover:bg-white/60"
+                index === currentIndex ? "w-8" : "w-2 bg-white/30 hover:bg-white/60"
               }`}
+              style={index === currentIndex ? { backgroundColor: game.accentColor } : undefined}
               aria-label={`Mostrar ${item.title}`}
               aria-pressed={index === currentIndex}
             />
