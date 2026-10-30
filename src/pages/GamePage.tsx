@@ -12,10 +12,10 @@ export default function GamePage() {
   }
 
   return (
-    <div className="min-h-screen bg-[#202020] pb-20 pt-24 text-white md:pt-28">
+    <div className="min-h-screen bg-[#100D18] pb-20 pt-24 text-white md:pt-28">
       <section className="px-0 md:px-6">
         <div className="mx-auto max-w-[1200px]">
-          <div className="relative overflow-hidden rounded-none bg-[#292929] md:rounded-[2rem]">
+          <div className="relative overflow-hidden rounded-none bg-[#201A2B] md:rounded-[2rem]">
             <Carousel images={game.banners} />
             <div className="pointer-events-none absolute inset-0 z-10 flex flex-col items-center justify-center bg-gradient-to-t from-black/70 via-black/20 to-black/20 px-6 text-center">
               <img
@@ -27,12 +27,12 @@ export default function GamePage() {
                 }}
               />
               {game.isComingSoon && (
-                <span className="mb-3 rounded-full bg-[#ffbd3f] px-4 py-2 text-xs font-black uppercase tracking-wider text-[#171717]">
+                <span className="mb-3 rounded-full bg-[#B84DFF] px-4 py-2 text-xs font-black uppercase tracking-wider text-[#100D18]">
                   Em breve
                 </span>
               )}
               <h1 className="text-[clamp(2.2rem,5vw,4.5rem)] font-black leading-tight tracking-[-0.06em] text-white drop-shadow-lg">
-                {game.title}<span className="text-[#ffbd3f]">.</span>
+                {game.title}<span className="text-[#B84DFF]">.</span>
               </h1>
             </div>
           </div>
@@ -42,13 +42,13 @@ export default function GamePage() {
       <section className="mx-auto max-w-[1000px] px-6 pt-16 md:pt-24">
         <Link
           to="/"
-          className="inline-flex items-center gap-2 text-sm font-bold text-white/50 no-underline transition-colors hover:text-[#ffbd3f]"
+          className="inline-flex items-center gap-2 text-sm font-bold text-white/50 no-underline transition-colors hover:text-[#B84DFF]"
         >
           <ArrowLeft size={16} /> Voltar para Unibits
         </Link>
 
         <div className="mx-auto mt-12 max-w-[760px] text-center md:mt-16">
-          <p className="mb-4 text-xs font-bold uppercase tracking-[0.3em] text-[#ffbd3f]">
+          <p className="mb-4 text-xs font-bold uppercase tracking-[0.3em] text-[#B84DFF]">
             {game.isComingSoon ? "Novo projeto" : "Jogo mobile"}
           </p>
           <h2 className="text-[clamp(1.7rem,4vw,3rem)] font-bold leading-tight tracking-[-0.04em] text-white">
@@ -61,7 +61,7 @@ export default function GamePage() {
 
         <div className="mt-20">
           <div className="mb-10 text-center">
-            <p className="mb-3 text-xs font-bold uppercase tracking-[0.3em] text-[#ffbd3f]">
+            <p className="mb-3 text-xs font-bold uppercase tracking-[0.3em] text-[#B84DFF]">
               Descubra
             </p>
             <h3 className="text-2xl font-black tracking-tight text-white md:text-3xl">
@@ -70,8 +70,8 @@ export default function GamePage() {
           </div>
           <div className="grid gap-x-12 gap-y-10 md:grid-cols-2">
             {game.features.map((feature, index) => (
-              <article key={`${feature.title}-${index}`} className="rounded-3xl bg-[#191919] p-7 md:p-8">
-                <h4 className="text-xl font-bold text-[#ffbd3f]">{feature.title}</h4>
+              <article key={`${feature.title}-${index}`} className="rounded-3xl bg-[#171321] p-7 md:p-8">
+              <h4 className="text-xl font-bold text-[#B84DFF]">{feature.title}</h4>
                 <p className="mt-3 text-sm leading-relaxed text-white/55 md:text-base">
                   {feature.description}
                 </p>
@@ -80,13 +80,13 @@ export default function GamePage() {
           </div>
         </div>
 
-        <div className="mt-16 rounded-[2rem] bg-[#191919] px-6 py-10 text-center md:mt-20 md:px-12 md:py-14">
+        <div className="mt-16 rounded-[2rem] bg-[#171321] px-6 py-10 text-center md:mt-20 md:px-12 md:py-14">
           <p className="mx-auto max-w-2xl text-xl font-semibold leading-relaxed text-white md:text-2xl">
             {game.conclusion}
           </p>
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
             {game.isComingSoon ? (
-              <span className="rounded-full bg-white/5 px-8 py-4 text-sm font-black uppercase tracking-wider text-[#ffbd3f]">
+              <span className="rounded-full bg-white/5 px-8 py-4 text-sm font-black uppercase tracking-wider text-[#B84DFF]">
                 Em breve
               </span>
             ) : (
@@ -94,7 +94,7 @@ export default function GamePage() {
                 href={game.playStoreUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full bg-[#ffbd3f] px-8 py-4 text-sm font-black uppercase tracking-wide text-[#171717] no-underline transition-transform hover:-translate-y-0.5"
+                className="inline-flex items-center gap-2 rounded-full bg-[#B84DFF] px-8 py-4 text-sm font-black uppercase tracking-wide text-[#100D18] no-underline transition-transform hover:-translate-y-0.5"
               >
                 Baixar na Play Store <ArrowUpRight size={17} />
               </a>
