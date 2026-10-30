@@ -10,7 +10,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
-      <div className="bg-[#0B0B0B] text-white font-['Inter',system-ui,sans-serif] w-full min-h-screen flex flex-col">
+      <div className="bg-[#050408] text-white font-['Inter',system-ui,sans-serif] w-full min-h-screen flex flex-col">
         <Navbar />
         
         {/* Main Content Area */}
