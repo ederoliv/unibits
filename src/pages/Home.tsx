@@ -1,4 +1,4 @@
-import { ArrowDown, ArrowUpRight, Camera, MessageCircle, MonitorPlay } from "lucide-react";
+import { ArrowDown, ArrowUpRight, Camera, MessageCircle, MonitorPlay, Smartphone } from "lucide-react";
 import { Link } from "react-router-dom";
 import { games } from "../data/games";
 import HeroCarousel from "../components/HeroCarousel";
@@ -111,6 +111,13 @@ export default function Home() {
                       Em breve
                     </span>
                   )}
+                  <span
+                    className="absolute right-5 top-5 flex h-9 w-9 items-center justify-center rounded-full bg-black/45 text-white/85 backdrop-blur-sm"
+                    title="Jogo mobile"
+                    aria-label="Jogo mobile"
+                  >
+                    <Smartphone size={17} />
+                  </span>
                   <div className="absolute bottom-5 left-5 flex items-center gap-4 md:bottom-7 md:left-7">
                     <img
                       src={game.iconSrc}
@@ -118,10 +125,7 @@ export default function Home() {
                       className="h-14 w-14 rounded-2xl object-cover shadow-xl md:h-16 md:w-16"
                     />
                     <div>
-                      <p className="text-sm font-bold uppercase tracking-wider" style={{ color: game.accentColor }}>
-                        {game.isComingSoon ? "Novo projeto" : "Jogo mobile"}
-                      </p>
-                      <h3 className="mt-1 text-xl font-black text-white md:text-2xl">
+                      <h3 className="text-xl font-black text-white md:text-2xl">
                         {game.title}<span style={{ color: game.accentColor }}>.</span>
                       </h3>
                     </div>
