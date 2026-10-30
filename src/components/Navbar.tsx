@@ -38,7 +38,7 @@ export default function Navbar() {
 
   return (
     <header 
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${isHidden ? '-translate-y-full' : 'translate-y-0'} bg-[#130F1B]/90 backdrop-blur-md`}
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${isHidden ? '-translate-y-full' : 'translate-y-0'} bg-[#0D0914]/90 backdrop-blur-md`}
     >
       <div className="max-w-[1440px] mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
@@ -57,7 +57,7 @@ export default function Navbar() {
                   onMouseEnter={() => setDesktopDropdownOpen(true)}
                   onMouseLeave={() => setDesktopDropdownOpen(false)}
                 >
-                  <a href={l.href} className="text-white/70 hover:text-[#B84DFF] transition-colors text-sm font-medium flex items-center gap-1 cursor-pointer bg-transparent border-none no-underline">
+                  <a href={l.href} className="text-white/70 hover:text-[#815EFF] transition-colors text-sm font-medium flex items-center gap-1 cursor-pointer bg-transparent border-none no-underline">
                     {l.label}
                     <ChevronDown size={14} className={`transition-transform duration-200 ${desktopDropdownOpen ? 'rotate-180' : ''}`} />
                   </a>
@@ -70,7 +70,7 @@ export default function Navbar() {
                             key={game.id} 
                             to={`/jogo/${game.id}`}
                             onClick={() => setDesktopDropdownOpen(false)}
-                            className="text-white/70 hover:text-[#B84DFF] hover:bg-white/5 px-4 py-3 text-sm transition-colors no-underline text-left"
+                            className="text-white/70 hover:text-[#815EFF] hover:bg-white/5 px-4 py-3 text-sm transition-colors no-underline text-left"
                           >
                             {game.title}
                           </Link>
@@ -86,7 +86,7 @@ export default function Navbar() {
                 <Link
                   key={l.label}
                   to={l.path}
-                  className="text-white/70 hover:text-[#B84DFF] transition-colors no-underline text-sm font-medium"
+                  className="text-white/70 hover:text-[#815EFF] transition-colors no-underline text-sm font-medium"
                 >
                   {l.label}
                 </Link>
@@ -96,7 +96,7 @@ export default function Navbar() {
               <a
                 key={l.label}
                 href={l.href}
-                className="text-white/70 hover:text-[#B84DFF] transition-colors no-underline text-sm font-medium"
+                className="text-white/70 hover:text-[#815EFF] transition-colors no-underline text-sm font-medium"
               >
                 {l.label}
               </a>
@@ -108,7 +108,7 @@ export default function Navbar() {
         <div className="flex items-center gap-4">
           <a
             href="/#contatos"
-            className="bg-[#B84DFF] text-[#100D18] px-5 py-2 rounded-full font-bold text-[13px] tracking-wide no-underline hover:bg-white transition-colors"
+            className="bg-[#815EFF] text-[#09070F] px-5 py-2 rounded-full font-bold text-[13px] tracking-wide no-underline hover:bg-white transition-colors"
           >
             Fale com a gente
           </a>
@@ -125,13 +125,13 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="md:hidden bg-[#130F1B] px-6 py-4 pb-6 flex flex-col">
+        <div className="md:hidden bg-[#0D0914] px-6 py-4 pb-6 flex flex-col">
           {navLinks.map((l) => {
             if (l.isDropdown) {
               return (
                 <div key={l.label}>
                   <div className="w-full text-white/80 py-3 text-[15px] flex justify-between items-center bg-transparent border-none">
-                    <a href={l.href} onClick={() => setMenuOpen(false)} className="text-white/70 hover:text-[#B84DFF] no-underline text-left flex-1 font-medium">
+                    <a href={l.href} onClick={() => setMenuOpen(false)} className="text-white/70 hover:text-[#815EFF] no-underline text-left flex-1 font-medium">
                       {l.label}
                     </a>
                     <button onClick={() => setMobileDropdownOpen(!mobileDropdownOpen)} aria-label={mobileDropdownOpen ? "Recolher lista de jogos" : "Expandir lista de jogos"} aria-expanded={mobileDropdownOpen} className="bg-white/5 hover:bg-white/10 transition-colors rounded-md p-1.5 cursor-pointer text-white flex-shrink-0 border-none">
@@ -145,7 +145,7 @@ export default function Navbar() {
                           key={game.id} 
                           to={`/jogo/${game.id}`}
                           onClick={() => setMenuOpen(false)}
-                          className="text-white/55 hover:text-[#B84DFF] py-2.5 text-[14px] no-underline transition-colors"
+                          className="text-white/55 hover:text-[#815EFF] py-2.5 text-[14px] no-underline transition-colors"
                         >
                           {game.title}
                         </Link>
@@ -161,7 +161,7 @@ export default function Navbar() {
                   key={l.label}
                   to={l.path}
                   onClick={() => setMenuOpen(false)}
-                  className="block text-white/70 hover:text-[#B84DFF] py-3 text-[15px] no-underline transition-colors"
+                  className="block text-white/70 hover:text-[#815EFF] py-3 text-[15px] no-underline transition-colors"
                 >
                   {l.label}
                 </Link>
@@ -171,7 +171,7 @@ export default function Navbar() {
               <a
                 key={l.label}
                 href={l.href}
-                className="block text-white/70 hover:text-[#B84DFF] py-3 text-[15px] no-underline transition-colors"
+                className="block text-white/70 hover:text-[#815EFF] py-3 text-[15px] no-underline transition-colors"
               >
                 {l.label}
               </a>

@@ -37,7 +37,7 @@ export default function Carousel({ images }: CarouselProps) {
               }}
             />
             {/* Dark overlay specifically for carousel to ensure text readability */}
-            <div className="absolute inset-0 bg-[#0b0b0b]/40" />
+            <div className="absolute inset-0 bg-[#07060B]/40" />
           </div>
         ))}
       </div>
@@ -50,7 +50,7 @@ export default function Carousel({ images }: CarouselProps) {
               key={i}
               onClick={() => setCurrentIndex(i)}
               className={`w-2.5 h-2.5 rounded-full transition-colors ${
-                i === currentIndex ? "bg-[#B84DFF]" : "bg-white/30 hover:bg-white/50"
+                i === currentIndex ? "bg-[#815EFF]" : "bg-white/30 hover:bg-white/50"
               }`}
               aria-label={`Go to slide ${i + 1}`}
             />
