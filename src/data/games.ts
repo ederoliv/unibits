@@ -13,6 +13,7 @@ export interface GameInfo {
   features: GameFeature[];
   conclusion: string;
   isComingSoon?: boolean;
+  launchDate?: string;
   playStoreUrl: string;
   iconSrc: string;
   banners: string[];
@@ -134,50 +135,68 @@ export const games: GameInfo[] = [
   },
   {
     id: "elite-carros-br",
-    title: "Elite Carros BR",
-    subtitle: "O mundo dos carros rebaixados e do som automotivo brasileiro",
-    description: "Explore cidades e estradas inspiradas no Brasil ao volante de carros rebaixados e esportivos. Monte seu som automotivo, personalize rodas, suspensão e cores, trabalhe como motorista de aplicativo e curta uma direção leve e divertida.",
-    heroDescription: "Carros rebaixados, som automotivo e ruas brasileiras. Personalize seu carro, explore o mapa e faça corridas como motorista de aplicativo.",
-    featuresTitle: "O que você encontra:",
+    title: "Elite Carros BR - Online",
+    subtitle: "O melhor jogo de carros brasileiros!",
+    description: "Elite Carros BR - Online é para quem curte carros brasileiros, rebaixados e esportivos. Explore cidades e estradas, personalize rodas, suspensão e cores, monte seu paredão automotivo e encontre amigos no modo online. Trabalhe como motorista de aplicativo ou entregador de encomendas para ganhar dinheiro e abastecer seus carros. Com física leve e controles suaves, cada rolê é feito para curtir.",
+    heroDescription: "Carros rebaixados, modo online e som automotivo. Explore o mapa brasileiro, personalize sua nave e faça dinheiro como motorista ou entregador.",
+    featuresTitle: "Explore, personalize e acelere:",
     features: [
       {
         title: "Carros rebaixados e esportivos",
-        description: "Dirija veículos inspirados na cultura automotiva brasileira, dos rebaixados aos esportivos."
+        description: "Escolha entre carros inspirados na cultura automotiva brasileira, dos modelos rebaixados aos mais rápidos."
+      },
+      {
+        title: "Jogue com seus amigos",
+        description: "Encontre a galera no modo online e faça aquele rolê junto."
       },
       {
         title: "Som automotivo",
-        description: "Monte seu sistema de som e sinta o grave pelas ruas do mapa."
+        description: "Monte seu paredão e curta os graves pesados pelas ruas do mapa."
       },
       {
         title: "Mapa brasileiro",
-        description: "Explore cidades, bairros, avenidas e estradas inspirados no Brasil."
+        description: "Explore livremente cidades, bairros, avenidas e estradas inspirados no Brasil."
       },
       {
         title: "Personalização completa",
-        description: "Modifique rodas, suspensão e cores para deixar o carro com o seu estilo."
+        description: "Modifique rodas, suspensão e cores para deixar cada carro do seu jeito."
       },
       {
         title: "Direção divertida",
-        description: "Acelere, corte giro e aproveite uma física leve com controles suaves."
+        description: "Acelere, corte giro e curta uma física leve com controles suaves."
       },
       {
-        title: "Trabalhe como motorista de app",
-        description: "Faça corridas, ganhe dinheiro e abasteça sua coleção de carros."
+        title: "Seu estilo de jogo",
+        description: "Curta um visual estilizado com desempenho leve e uma experiência imersiva."
+      },
+      {
+        title: "Trabalhe dirigindo",
+        description: "Faça corridas como motorista de aplicativo ou entregue encomendas para ganhar dinheiro e abastecer seus carros."
       }
     ],
-    conclusion: "Personalize seu carro, explore o mapa e curta o melhor do estilo automotivo brasileiro.",
+    conclusion: "Monte seu paredão, chame os amigos e aproveite o melhor dos carros brasileiros.",
+    isComingSoon: true,
+    launchDate: "Lançamento em dezembro de 2026",
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.Unibits.EliteCarrosBR",
-    iconSrc: "https://play-lh.googleusercontent.com/I5EGy_n-Ly2OT2go8mCVjVuZUSOEGRJCXE7T6hAHl4a-uoFulUfcCzn9blDZr9eEVSNJjb0hg4hwj92DPaE8QQ=s512",
+    iconSrc: "/games/elite-carros-br/icon.png",
     accentColor: "#FFC928",
     banners: [
-      "https://play-lh.googleusercontent.com/EM1J_A6q-M3x3A2dA78-SE-2C_-SMzEYeH3BZ-eTjBuSNYZqm771S8SKZlFgx3XhuemG033xnnmUapQ3WvRpsw=w1052-h592",
-      "https://play-lh.googleusercontent.com/Rg3FcJGdtThelB3WP8GJicWWXYl7R4DBZcNRuwm6394M3wm-yAUk7nNHXvGmJ836bWltmNoV65TPslYHoE_XckM=w1052-h592",
-      "https://play-lh.googleusercontent.com/boOkxVdzOxsyoH3q8HLPw0mzMKuimN3Q8Cy9zHCoV335Oz3Tbw6HhuSZNChbmmIpBohqntpZcn7xkX9upnRU=w1052-h592",
-      "https://play-lh.googleusercontent.com/rBqwYdlzPDfjcV3cJ9qpr-zn8OC7DL7bFNKS_GbSOptpossZjk-8EeiZRsCekYiPrzcw28pf0EEu6TOv3Lm7V28=w1052-h592",
-      "https://play-lh.googleusercontent.com/c1P3UtlG3MvLOxmtbHt67yklQpPaD__X-NHya4FFbq0HRHfxdNI3rgpQFZmBTxvLr0rgnZv1JE9cqJix0U72UwQ=w1052-h592",
-      "https://play-lh.googleusercontent.com/TM9cUCQdIbjsW-hRAy-EvUk7_3Mitm4PsF4Lk17O0qPZwTZfpynxS-BcVLtiPuWGXOu1tLzt509InapysLbw5j8=w1052-h592",
-      "https://play-lh.googleusercontent.com/g6nNChwdAVcH3NNYH_-2qoJ6liKu4dQHNv6b2Fk9dYPn2EpaCcnvhn0OGUbvjy0gkEAXTCyHdmUZKO4bG8SrLMM=w1052-h592",
-      "https://play-lh.googleusercontent.com/t24b5tsFy4dGuBRa69ZK7itl7pUFdIMoX3ffN_ZpZfjREeIRfss_gzV2e05OhHZW7HS5WFqCuSm5yLF2SvPoGQ=w1052-h592"
+      "/games/elite-carros-br/screenshot-01.png",
+      "/games/elite-carros-br/screenshot-02.png",
+      "/games/elite-carros-br/screenshot-03.png",
+      "/games/elite-carros-br/screenshot-04.png",
+      "/games/elite-carros-br/screenshot-05.png",
+      "/games/elite-carros-br/screenshot-06.png",
+      "/games/elite-carros-br/screenshot-07.png",
+      "/games/elite-carros-br/screenshot-08.png",
+      "/games/elite-carros-br/screenshot-09.png",
+      "/games/elite-carros-br/screenshot-10.png",
+      "/games/elite-carros-br/screenshot-11.png",
+      "/games/elite-carros-br/screenshot-12.png"
     ]
   }
 ];
+
+export const homepageGames = [...games].sort(
+  (first, second) => Number(Boolean(second.launchDate)) - Number(Boolean(first.launchDate))
+);

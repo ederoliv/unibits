@@ -41,7 +41,7 @@ export default function Footer() {
                   className="text-sm text-white/60 no-underline transition-colors hover:text-white"
                 >
                   {game.title}
-                  {game.isComingSoon && <span className="ml-2 text-xs text-white/50">Em breve</span>}
+                  {game.isComingSoon && <span className="ml-2 text-xs text-white/50">{game.launchDate ?? "Em breve"}</span>}
                 </Link>
               ))}
             </div>
