@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { games } from "../data/games";
+import { homepageGames } from "../data/games";
 import { ArrowDown, ArrowUpRight } from "lucide-react";
 
 export default function HeroCarousel() {
@@ -9,12 +9,12 @@ export default function HeroCarousel() {
   // Auto slide every 6 seconds
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % games.length);
+      setCurrentIndex((prev) => (prev + 1) % homepageGames.length);
     }, 6000);
     return () => clearInterval(interval);
   }, []);
 
-  const game = games[currentIndex];
+  const game = homepageGames[currentIndex];
 
   return (
     <section
@@ -50,7 +50,7 @@ export default function HeroCarousel() {
             </Link>
             {game.isComingSoon ? (
               <span className="rounded-full bg-white/5 px-6 py-3.5 text-sm font-bold uppercase tracking-wide text-white/60">
-                Em breve
+                {game.launchDate ?? "Em breve"}
               </span>
             ) : (
               <a
@@ -91,7 +91,7 @@ export default function HeroCarousel() {
           Role para explorar <ArrowDown size={15} />
         </a>
         <div className="flex items-center gap-2" aria-label="Escolher jogo em destaque">
-          {games.map((item, index) => (
+          {homepageGames.map((item, index) => (
             <button
               key={item.id}
               onClick={() => setCurrentIndex(index)}
@@ -105,7 +105,7 @@ export default function HeroCarousel() {
           ))}
         </div>
         <span className="hidden text-xs font-bold tracking-widest text-white/35 sm:block">
-          {String(currentIndex + 1).padStart(2, "0")} / {String(games.length).padStart(2, "0")}
+          {String(currentIndex + 1).padStart(2, "0")} / {String(homepageGames.length).padStart(2, "0")}
         </span>
       </div>
       <style>{`

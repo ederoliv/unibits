@@ -37,7 +37,7 @@ export default function GamePage() {
                   className="mb-3 rounded-full px-4 py-2 text-xs font-black uppercase tracking-wider text-[#050408]"
                   style={{ backgroundColor: game.accentColor }}
                 >
-                  Em breve
+                  {game.launchDate ?? "Em breve"}
                 </span>
               )}
               <h1 className="text-[clamp(2.2rem,5vw,4.5rem)] font-black leading-tight tracking-[-0.06em] text-white drop-shadow-lg">

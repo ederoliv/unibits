@@ -1,6 +1,6 @@
 import { ArrowDown, ArrowUpRight, Camera, MessageCircle, MonitorPlay, Smartphone } from "lucide-react";
 import { Link } from "react-router-dom";
-import { games } from "../data/games";
+import { homepageGames } from "../data/games";
 import HeroCarousel from "../components/HeroCarousel";
 
 const studioPillars = [
@@ -83,7 +83,7 @@ export default function Home() {
           </div>
 
           <div className="grid gap-6 md:grid-cols-2">
-            {games.map((game) => (
+            {homepageGames.map((game) => (
               <Link
                 key={game.id}
                 to={`/jogo/${game.id}`}
@@ -103,12 +103,12 @@ export default function Home() {
                     }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
-                  {game.isComingSoon && (
+                  {(game.launchDate || game.isComingSoon) && (
                     <span
                       className="absolute left-5 top-5 rounded-full px-4 py-2 text-[10px] font-black uppercase tracking-widest text-[#09070F]"
                       style={{ backgroundColor: game.accentColor }}
                     >
-                      Em breve
+                      {game.launchDate ?? "Em breve"}
                     </span>
                   )}
                   <span
